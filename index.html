@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Kepler.gl Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/kepler.gl/dist/keplergl.css">
+    <style>
+      html, body, #app {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- Include dependencies -->
+    <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/redux/dist/redux.min.js"></script>
+    <script src="https://unpkg.com/react-redux/dist/react-redux.min.js"></script>
+    <script src="https://unpkg.com/kepler.gl/dist/keplergl.min.js"></script>
+    <script>
+      // Access Kepler.gl components and reducer from the global "kepler" namespace.
+      const { KeplerGl, keplerGlReducer } = kepler.gl;
+      const { createStore, combineReducers } = Redux;
+      const { Provider } = ReactRedux;
+
+      // Create a Redux store that includes the kepler.gl reducer.
+      const reducer = combineReducers({
+        keplerGl: keplerGlReducer
+      });
+      const store = createStore(reducer);
+
+      // Render the Kepler.gl component.
+      ReactDOM.render(
+        React.createElement(Provider, { store },
+          React.createElement(KeplerGl, { id: 'map', width: window.innerWidth, height: window.innerHeight })
+        ),
+        document.getElementById('app')
+      );
+    </script>
+  </body>
+</html>
