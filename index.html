@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Kepler.gl Map</title>
-    <link rel="stylesheet" href="https://unpkg.com/kepler.gl/dist/keplergl.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kepler.gl@2.6.0/dist/keplergl.css">
     <style>
       html, body, #app {
         margin: 0;
@@ -15,28 +15,29 @@
   </head>
   <body>
     <div id="app"></div>
-    <!-- Include dependencies -->
-    <script src="https://unpkg.com/react/umd/react.production.min.js"></script>
-    <script src="https://unpkg.com/react-dom/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/redux/dist/redux.min.js"></script>
-    <script src="https://unpkg.com/react-redux/dist/react-redux.min.js"></script>
-    <script src="https://unpkg.com/kepler.gl/dist/keplergl.min.js"></script>
+    <!-- Include dependencies with versioned URLs -->
+    <script src="https://cdn.jsdelivr.net/npm/react@17/umd/react.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/redux@4.2.0/dist/redux.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/react-redux@7.2.6/dist/react-redux.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kepler.gl@2.6.0/dist/keplergl.min.js"></script>
     <script>
-      // Access Kepler.gl components and reducer from the global "kepler" namespace.
       const { KeplerGl, keplerGlReducer } = kepler.gl;
       const { createStore, combineReducers } = Redux;
       const { Provider } = ReactRedux;
 
-      // Create a Redux store that includes the kepler.gl reducer.
       const reducer = combineReducers({
         keplerGl: keplerGlReducer
       });
       const store = createStore(reducer);
 
-      // Render the Kepler.gl component.
       ReactDOM.render(
         React.createElement(Provider, { store },
-          React.createElement(KeplerGl, { id: 'map', width: window.innerWidth, height: window.innerHeight })
+          React.createElement(KeplerGl, {
+            id: 'map',
+            width: window.innerWidth,
+            height: window.innerHeight
+          })
         ),
         document.getElementById('app')
       );
