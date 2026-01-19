@@ -1,0 +1,25 @@
+---
+layout: page
+title: Property Blog
+subtitle: Insights, tips, and news from the Sunshine Coast property market
+---
+
+<div class="blog-grid">
+  {% for post in site.posts %}
+  <article class="blog-card">
+    <div class="blog-image">📰</div>
+    <div class="blog-content">
+      <div class="blog-meta">{{ post.date | date: "%B %d, %Y" }}</div>
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+      <a href="{{ post.url | relative_url }}" class="read-more">Read More</a>
+    </div>
+  </article>
+  {% endfor %}
+</div>
+
+{% if site.posts.size == 0 %}
+<div style="text-align: center; padding: 3rem; color: var(--mid-gray);">
+  <p>Blog posts coming soon! Check back for insights on the Sunshine Coast property market.</p>
+</div>
+{% endif %}

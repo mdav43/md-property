@@ -1,46 +1,116 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Davidson & McGhee</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/kepler.gl@2.6.0/dist/keplergl.css">
-    <style>
-      html, body, #app {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-      }
-    </style>
-  </head>
-  <body>
-    <div id="app"></div>
-    <!-- Include dependencies with versioned URLs -->
-    <script src="https://cdn.jsdelivr.net/npm/react@17/umd/react.production.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/react-dom@17/umd/react-dom.production.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/redux@4.2.0/dist/redux.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/react-redux@7.2.6/dist/react-redux.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/kepler.gl@2.6.0/dist/keplergl.min.js"></script>
-    <script>
-      const { KeplerGl, keplerGlReducer } = kepler.gl;
-      const { createStore, combineReducers } = Redux;
-      const { Provider } = ReactRedux;
+---
+layout: default
+title: Home
+---
 
-      const reducer = combineReducers({
-        keplerGl: keplerGlReducer
-      });
-      const store = createStore(reducer);
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>{{ site.title }}</h1>
+    <p class="tagline">{{ site.tagline }}</p>
+    <div>
+      <a href="#contact" class="btn">Get In Touch</a>
+      <a href="/about/" class="btn btn-secondary">Learn More</a>
+    </div>
+  </div>
+</section>
 
-      ReactDOM.render(
-        React.createElement(Provider, { store },
-          React.createElement(KeplerGl, {
-            id: 'map',
-            width: window.innerWidth,
-            height: window.innerHeight
-          })
-        ),
-        document.getElementById('app')
-      );
-    </script>
-  </body>
-</html>
+<!-- Introduction Section -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <h2>Your Sunshine Coast Property Experts</h2>
+      <p>With deep local knowledge and a commitment to excellence, we help you find your perfect property on the beautiful Sunshine Coast. Whether buying, selling, or investing, we're here to guide you every step of the way.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>🏡 Local Expertise</h3>
+        <p>Deep understanding of the Sunshine Coast property market, neighborhoods, and lifestyle opportunities.</p>
+      </div>
+      
+      <div class="feature-card">
+        <h3>💼 Professional Service</h3>
+        <p>Dedicated support throughout your property journey with transparent communication and expert guidance.</p>
+      </div>
+      
+      <div class="feature-card">
+        <h3>🌟 Results Driven</h3>
+        <p>Proven track record of successful sales and satisfied clients across the Sunshine Coast region.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+<section class="section-light">
+  <div class="container">
+    <div class="section-header">
+      <h2>Our Services</h2>
+      <p>Comprehensive real estate solutions tailored to your needs</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3>Property Sales</h3>
+        <p>Expert marketing and negotiation to achieve the best price for your property. We handle everything from listing to settlement.</p>
+      </div>
+      
+      <div class="feature-card">
+        <h3>Buyer Advocacy</h3>
+        <p>Professional guidance to help you find and secure your ideal property at the right price.</p>
+      </div>
+      
+      <div class="feature-card">
+        <h3>Property Management</h3>
+        <p>Comprehensive management services to maximize your investment returns and minimize stress.</p>
+      </div>
+      
+      <div class="feature-card">
+        <h3>Market Appraisals</h3>
+        <p>Accurate, complimentary property valuations based on current market conditions and comparable sales.</p>
+      </div>
+      
+      <div class="feature-card">
+        <h3>Investment Advice</h3>
+        <p>Strategic guidance on property investment opportunities across the Sunshine Coast region.</p>
+      </div>
+      
+      <div class="feature-card">
+        <h3>Area Insights</h3>
+        <p>In-depth local knowledge to help you understand neighborhoods, schools, amenities, and lifestyle options.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header">
+      <h2>Get In Touch</h2>
+      <p>Ready to start your property journey? We're here to help.</p>
+    </div>
+    
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="icon">📧</div>
+        <h3>Email Us</h3>
+        <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
+      </div>
+      
+      <div class="contact-card">
+        <div class="icon">📞</div>
+        <h3>Call Us</h3>
+        <p><a href="tel:{{ site.phone }}">{{ site.phone }}</a></p>
+      </div>
+      
+      <div class="contact-card">
+        <div class="icon">📍</div>
+        <h3>Visit Us</h3>
+        <p>{{ site.address }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
