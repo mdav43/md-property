@@ -155,7 +155,9 @@ import Layout from '../layouts/Layout.astro';
       <h2 class="section-title">Ready to Sell, Buy, or Explore Your Options?</h2>
       <div class="contact-content">
         <p class="contact-intro">
-          Jack McGhee is ready to make your property goals a reality. Because:<br/>
+          Jack McGhee is ready to make your property goals a reality. Because:
+        </p>
+        <p class="contact-tagline">
           <strong>"Think you know property? You don't know Jack."</strong>
         </p>
         <div class="contact-details">
@@ -504,13 +506,18 @@ import Layout from '../layouts/Layout.astro';
 
     .contact-intro {
       font-size: 1.2rem;
-      margin-bottom: 3rem;
+      margin-bottom: 1rem;
       line-height: 1.8;
     }
 
-    .contact-intro strong {
-      color: var(--gold-light);
+    .contact-tagline {
       font-size: 1.3rem;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .contact-tagline strong {
+      color: var(--gold-light);
     }
 
     .contact-details {
@@ -524,11 +531,16 @@ import Layout from '../layouts/Layout.astro';
       background: rgba(255, 255, 255, 0.1);
       padding: 2rem;
       border-radius: 8px;
-      backdrop-filter: blur(10px);
       display: flex;
       align-items: center;
       gap: 1.5rem;
       transition: all 0.3s ease;
+    }
+
+    @supports (backdrop-filter: blur(10px)) {
+      .contact-item {
+        backdrop-filter: blur(10px);
+      }
     }
 
     .contact-item:hover {
