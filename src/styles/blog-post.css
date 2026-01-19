@@ -45,17 +45,13 @@
   @apply mb-4 text-sm leading-relaxed;
 }
 
+/* Use Tailwind's list-disc with custom marker color for better maintainability */
 .post-content ul {
-  @apply my-5 ml-6 space-y-2;
+  @apply my-5 ml-6 space-y-2 list-disc marker:text-champagne;
 }
 
 .post-content li {
-  @apply text-sm leading-relaxed pl-2 relative;
-}
-
-.post-content li::before {
-  content: "•";
-  @apply absolute -left-4 text-champagne font-bold;
+  @apply text-sm leading-relaxed pl-2;
 }
 
 .post-content strong {

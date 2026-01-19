@@ -34,7 +34,7 @@ export default {
       },
       fontSize: {
         // Slightly smaller body with increased line-height for density
-        'body-sm': ['0.9375rem', { lineHeight: '1.7' }],
+        'body-sm': ['0.875rem', { lineHeight: '1.6' }],
         'body': ['0.9375rem', { lineHeight: '1.7' }],
         'body-lg': ['1.0625rem', { lineHeight: '1.8' }],
       },
