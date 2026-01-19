@@ -1,0 +1,19 @@
+{
+  "name": "md-property",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Professional Real Estate Website - Jack McGhee",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "keywords": ["real-estate", "astro", "sunshine-coast"],
+  "author": "Jack McGhee",
+  "license": "ISC",
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.13",
+    "astro": "^5.16.11"
+  }
+}

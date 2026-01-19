@@ -1,0 +1,263 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Jack McGhee Real Estate - Premium property services on the Sunshine Coast" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content={description}>
+  <title>{title} | Jack McGhee Real Estate</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="/" class="logo">
+        <span class="logo-text">Jack McGhee</span>
+        <span class="logo-subtitle">Real Estate</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Jack</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="#contact" class="contact-btn">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-content">
+      <div class="footer-section">
+        <h3>Jack McGhee Real Estate</h3>
+        <p>Premium property services on the Sunshine Coast</p>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>📞 0400 123 456</p>
+        <p>📧 jackmcghee@propertypro.com.au</p>
+        <p>📍 Mooloolaba, Sunshine Coast QLD</p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About Jack</a></li>
+          <li><a href="/blog">Blog</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; {new Date().getFullYear()} Jack McGhee Real Estate. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <style is:global>
+    :root {
+      /* Sunshine Coast inspired luxury palette */
+      --ocean-deep: #0A2E4D;      /* Deep ocean blue */
+      --ocean-blue: #1A5F7A;      /* Rich coastal blue */
+      --ocean-light: #86BBD8;     /* Light ocean */
+      --sand-warm: #F4E9D8;       /* Warm sandy beige */
+      --sand-light: #FAF7F2;      /* Light sand/cream */
+      --gold-accent: #C9A96E;     /* Elegant gold */
+      --gold-light: #E8D5B7;      /* Light gold */
+      --white: #FFFFFF;
+      --text-dark: #2C2C2C;
+      --text-light: #666666;
+      
+      /* Typography */
+      --font-serif: 'Playfair Display', serif;
+      --font-sans: 'Inter', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--text-dark);
+      line-height: 1.6;
+      background-color: var(--sand-light);
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-serif);
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Navigation */
+    .navbar {
+      background: var(--white);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.95);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2rem;
+    }
+
+    .logo {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-text {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--ocean-deep);
+      letter-spacing: -0.5px;
+    }
+
+    .logo-subtitle {
+      font-family: var(--font-sans);
+      font-size: 0.75rem;
+      color: var(--gold-accent);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--ocean-blue);
+    }
+
+    .contact-btn {
+      background: var(--ocean-blue);
+      color: var(--white) !important;
+      padding: 0.75rem 1.5rem;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-btn:hover {
+      background: var(--ocean-deep);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(26, 95, 122, 0.3);
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--ocean-deep);
+      color: var(--sand-light);
+      padding: 4rem 0 0;
+      margin-top: 6rem;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .footer-section h3, .footer-section h4 {
+      color: var(--gold-light);
+      margin-bottom: 1rem;
+    }
+
+    .footer-section p {
+      margin-bottom: 0.5rem;
+      color: var(--sand-warm);
+    }
+
+    .footer-section ul {
+      list-style: none;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-section a {
+      color: var(--sand-warm);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-section a:hover {
+      color: var(--gold-light);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(201, 169, 110, 0.2);
+      padding: 1.5rem 0;
+      text-align: center;
+    }
+
+    .footer-bottom p {
+      color: var(--sand-warm);
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+      }
+
+      .container {
+        padding: 0 1.5rem;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+  </style>
+</body>
+</html>

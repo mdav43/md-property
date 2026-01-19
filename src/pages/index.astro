@@ -1,0 +1,469 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Home">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          Think You Know Property?<br/>
+          <span class="accent">You Don't Know Jack.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Premium real estate services on the Sunshine Coast.<br/>
+          Delivering exceptional results with 20+ years of expertise.
+        </p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Get Started</a>
+          <a href="/about" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-number">20+</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">500+</div>
+          <div class="stat-label">Properties Sold</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">#1</div>
+          <div class="stat-label">Client Satisfaction</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services">
+    <div class="container">
+      <h2 class="section-title">How I Can Help</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🏡</div>
+          <h3>Selling Your Property</h3>
+          <p>Maximize your property's value with strategic marketing, emotional storytelling, and expert negotiation skills honed in Sydney's competitive markets.</p>
+          <a href="#contact" class="service-link">Get Your Free Appraisal →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔍</div>
+          <h3>Buyer's Advocate</h3>
+          <p>Your trusted partner in finding the perfect Sunshine Coast property. Benefit from deep market insights and hyperlocal knowledge to buy with confidence.</p>
+          <a href="#contact" class="service-link">Start Your Search →</a>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💼</div>
+          <h3>Market Insights</h3>
+          <p>Data-driven property analysis and strategic guidance to help you make informed decisions in one of Australia's fastest-growing regions.</p>
+          <a href="/blog" class="service-link">Read Latest Insights →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Sunshine Coast Section -->
+  <section class="why-sunshine-coast">
+    <div class="container">
+      <h2 class="section-title">Why the Sunshine Coast?</h2>
+      <div class="features-grid">
+        <div class="feature">
+          <h3>🌊 Lifestyle</h3>
+          <p>Beautiful beaches, vibrant communities, and a stress-free pace of life that attracts families from across Australia.</p>
+        </div>
+        <div class="feature">
+          <h3>📈 Growth Potential</h3>
+          <p>With incoming investments and infrastructure projects, the Sunshine Coast is a hotbed for sustainable property growth.</p>
+        </div>
+        <div class="feature">
+          <h3>👨‍👩‍👧‍👦 Family-Friendly</h3>
+          <p>Top-rated schools, parks, and community-focused living make this the perfect place to raise a family.</p>
+        </div>
+        <div class="feature">
+          <h3>🏖️ Beachside Living</h3>
+          <p>From Mooloolaba's relaxed charm to Maroochydore's dynamic community, find your perfect coastal lifestyle.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Preview Section -->
+  <section class="about-preview">
+    <div class="container about-content">
+      <div class="about-text">
+        <h2>About Jack McGhee</h2>
+        <p>
+          I'm Jack McGhee, a senior real estate professional with over 20 years of experience 
+          delivering premium results in Australia's most competitive property markets.
+        </p>
+        <p>
+          After relocating to the Sunshine Coast with my young family, I'm now proud to call 
+          Mooloolaba home and bring metropolitan expertise to a community I've long admired.
+        </p>
+        <a href="/about" class="btn btn-primary">Read My Story</a>
+      </div>
+      <div class="about-image">
+        <div class="image-placeholder">
+          <span>Jack McGhee</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Blog Posts -->
+  <section class="blog-preview">
+    <div class="container">
+      <h2 class="section-title">Latest Insights</h2>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-image-placeholder"></div>
+          <div class="blog-content">
+            <span class="blog-date">December 2025</span>
+            <h3>The Sunshine Coast Property Market: 2026 Outlook</h3>
+            <p>Discover the trends shaping the Sunshine Coast real estate market and what they mean for buyers and sellers...</p>
+            <a href="/blog/sunshine-coast-market-outlook-2026" class="blog-link">Read More →</a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-image-placeholder"></div>
+          <div class="blog-content">
+            <span class="blog-date">November 2025</span>
+            <h3>5 Tips for First-Time Home Buyers</h3>
+            <p>Navigating your first property purchase can be overwhelming. Here's my expert advice to make it seamless...</p>
+            <a href="/blog/first-time-buyer-tips" class="blog-link">Read More →</a>
+          </div>
+        </article>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="/blog" class="btn btn-secondary">View All Articles</a>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-blue) 100%);
+      color: var(--white);
+      padding: 6rem 0 4rem;
+      margin-top: -1px;
+    }
+
+    .hero-content {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    .hero-text {
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.1;
+    }
+
+    .hero-title .accent {
+      color: var(--gold-light);
+      display: block;
+      margin-top: 0.5rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--sand-warm);
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--gold-accent);
+      color: var(--ocean-deep);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(201, 169, 110, 0.4);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--white);
+      border: 2px solid var(--white);
+    }
+
+    .btn-secondary:hover {
+      background: var(--white);
+      color: var(--ocean-deep);
+      transform: translateY(-2px);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      backdrop-filter: blur(10px);
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      font-family: var(--font-serif);
+    }
+
+    .stat-label {
+      font-size: 0.9rem;
+      color: var(--sand-warm);
+      margin-top: 0.5rem;
+    }
+
+    /* Services Section */
+    .services {
+      padding: 6rem 0;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      color: var(--ocean-deep);
+      margin-bottom: 3rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: var(--white);
+      padding: 2.5rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-card h3 {
+      color: var(--ocean-deep);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .service-card p {
+      color: var(--text-light);
+      margin-bottom: 1.5rem;
+      line-height: 1.7;
+    }
+
+    .service-link {
+      color: var(--ocean-blue);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .service-link:hover {
+      color: var(--gold-accent);
+    }
+
+    /* Why Sunshine Coast */
+    .why-sunshine-coast {
+      padding: 6rem 0;
+      background: var(--sand-warm);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .feature {
+      background: var(--white);
+      padding: 2rem;
+      border-radius: 8px;
+      border-left: 4px solid var(--gold-accent);
+    }
+
+    .feature h3 {
+      color: var(--ocean-deep);
+      margin-bottom: 0.75rem;
+      font-size: 1.25rem;
+    }
+
+    .feature p {
+      color: var(--text-light);
+      line-height: 1.6;
+    }
+
+    /* About Preview */
+    .about-preview {
+      padding: 6rem 0;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      color: var(--ocean-deep);
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-text p {
+      color: var(--text-light);
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      line-height: 1.7;
+    }
+
+    .about-text .btn {
+      margin-top: 1rem;
+    }
+
+    .image-placeholder {
+      aspect-ratio: 4/5;
+      background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--ocean-light) 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1.5rem;
+      font-family: var(--font-serif);
+    }
+
+    /* Blog Preview */
+    .blog-preview {
+      padding: 6rem 0;
+      background: var(--sand-light);
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .blog-card {
+      background: var(--white);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .blog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .blog-image-placeholder {
+      height: 200px;
+      background: linear-gradient(135deg, var(--ocean-light) 0%, var(--sand-warm) 100%);
+    }
+
+    .blog-content {
+      padding: 1.5rem;
+    }
+
+    .blog-date {
+      color: var(--gold-accent);
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .blog-card h3 {
+      color: var(--ocean-deep);
+      margin: 0.75rem 0;
+      font-size: 1.25rem;
+    }
+
+    .blog-card p {
+      color: var(--text-light);
+      margin-bottom: 1rem;
+      line-height: 1.6;
+    }
+
+    .blog-link {
+      color: var(--ocean-blue);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .blog-link:hover {
+      color: var(--gold-accent);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.5rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .services-grid,
+      .features-grid,
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</Layout>
