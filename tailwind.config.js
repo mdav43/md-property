@@ -33,7 +33,10 @@ export default {
         sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
       },
       fontSize: {
-        // Slightly smaller body with increased line-height for density
+        // Custom body text sizes for information density with excellent readability
+        // body-sm: Compact text for dense layouts (lists, metadata, captions)
+        // body: Standard body text size (paragraphs, general content)
+        // body-lg: Emphasized body text (hero subtitles, important paragraphs)
         'body-sm': ['0.875rem', { lineHeight: '1.6' }],
         'body': ['0.9375rem', { lineHeight: '1.7' }],
         'body-lg': ['1.0625rem', { lineHeight: '1.8' }],
