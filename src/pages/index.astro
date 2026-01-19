@@ -45,13 +45,19 @@ import Layout from '../layouts/Layout.astro';
         <div class="service-card">
           <div class="service-icon">🏡</div>
           <h3>Selling Your Property</h3>
-          <p>Maximize your property's value with strategic marketing, emotional storytelling, and expert negotiation skills honed in Sydney's competitive markets.</p>
+          <h4 class="service-subtitle">The Power of Emotional Connection</h4>
+          <p>Australians are motivated by the lifestyle a property offers. Jack's marketing strategies tap into these motivations using tailored storytelling, evocative imagery, and immersive campaigns that make buyers <strong>see themselves living in your home</strong>.</p>
+          <h4 class="service-subtitle">Proven Negotiation Expertise</h4>
+          <p>Maximizing value requires deep market knowledge and strategic insight. Jack uses data-driven approaches to position your property competitively while his negotiation skills ensure you secure the best possible price.</p>
           <a href="#contact" class="service-link">Get Your Free Appraisal →</a>
         </div>
         <div class="service-card">
           <div class="service-icon">🔍</div>
-          <h3>Buyer's Advocate</h3>
-          <p>Your trusted partner in finding the perfect Sunshine Coast property. Benefit from deep market insights and hyperlocal knowledge to buy with confidence.</p>
+          <h3>Thinking of Buying?</h3>
+          <h4 class="service-subtitle">Your Advocate, Every Step of the Way</h4>
+          <p>Moving to the Sunshine Coast is a life-changing decision, and Jack is here to smooth the process. Whether you're relocating from across Australia or looking for an upgrade locally, Jack understands what matters most—location, lifestyle, and long-term value.</p>
+          <h4 class="service-subtitle">Market Insights You Can Trust</h4>
+          <p>Jack combines hyperlocal knowledge with property-specific insights, ensuring you buy with confidence in one of the fastest-growing regions in the country. From Mooloolaba's relaxed beachside charm to Maroochydore's dynamic community feel, Jack has you covered.</p>
           <a href="#contact" class="service-link">Start Your Search →</a>
         </div>
         <div class="service-card">
@@ -95,12 +101,13 @@ import Layout from '../layouts/Layout.astro';
       <div class="about-text">
         <h2>About Jack McGhee</h2>
         <p>
-          I'm Jack McGhee, a senior real estate professional with over 20 years of experience 
-          delivering premium results in Australia's most competitive property markets.
+          Jack McGhee, your trusted real estate expert, is committed to delivering unparalleled results as both a <strong>seller's agent</strong> and a <strong>buyer's advocate</strong>.
         </p>
         <p>
-          After relocating to the Sunshine Coast with my young family, I'm now proud to call 
-          Mooloolaba home and bring metropolitan expertise to a community I've long admired.
+          12 months ago, Jack settled in Mooloolaba, turning his frequent visits to the Sunshine Coast over the past 15 years into a permanent lifestyle. With strong family ties in Buderim and Mooloolaba, Jack brings a personal passion for the area alongside his professional expertise honed in Sydney's competitive eastern suburbs.
+        </p>
+        <p>
+          The Sunshine Coast isn't just where Jack works—it's the place he calls home. Let him help you make this stunning region your home too.
         </p>
         <a href="/about" class="btn btn-primary">Read My Story</a>
       </div>
@@ -138,6 +145,37 @@ import Layout from '../layouts/Layout.astro';
       </div>
       <div style="text-align: center; margin-top: 2rem;">
         <a href="/blog" class="btn btn-secondary">View All Articles</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Ready to Sell, Buy, or Explore Your Options?</h2>
+      <div class="contact-content">
+        <p class="contact-intro">
+          Jack McGhee is ready to make your property goals a reality. Because:
+        </p>
+        <p class="contact-tagline">
+          <strong>"Think you know property? You don't know Jack."</strong>
+        </p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div class="contact-info">
+              <div class="contact-label">Phone</div>
+              <a href="tel:0400123456" class="contact-link">0400 123 456</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📧</div>
+            <div class="contact-info">
+              <div class="contact-label">Email</div>
+              <a href="mailto:jackmcghee@propertypro.com.au" class="contact-link">jackmcghee@propertypro.com.au</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -286,6 +324,14 @@ import Layout from '../layouts/Layout.astro';
       color: var(--ocean-deep);
       margin-bottom: 1rem;
       font-size: 1.5rem;
+    }
+
+    .service-subtitle {
+      color: var(--ocean-blue);
+      margin-bottom: 0.75rem;
+      margin-top: 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
     }
 
     .service-card p {
@@ -439,6 +485,95 @@ import Layout from '../layouts/Layout.astro';
 
     .blog-link:hover {
       color: var(--gold-accent);
+    }
+
+    /* Contact Section */
+    .contact {
+      padding: 6rem 0;
+      background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-blue) 100%);
+      color: var(--white);
+    }
+
+    .contact .section-title {
+      color: var(--white);
+    }
+
+    .contact-content {
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-intro {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      line-height: 1.8;
+    }
+
+    .contact-tagline {
+      font-size: 1.3rem;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .contact-tagline strong {
+      color: var(--gold-light);
+    }
+
+    .contact-details {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .contact-item {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2rem;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    @supports (backdrop-filter: blur(10px)) {
+      .contact-item {
+        backdrop-filter: blur(10px);
+      }
+    }
+
+    .contact-item:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .contact-icon {
+      font-size: 2.5rem;
+    }
+
+    .contact-info {
+      text-align: left;
+    }
+
+    .contact-label {
+      font-size: 0.9rem;
+      color: var(--sand-warm);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .contact-link {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .contact-link:hover {
+      color: var(--gold-light);
     }
 
     /* Responsive */
