@@ -3,295 +3,231 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Home">
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h1 class="hero-title">
-          Think You Know Property?<br/>
-          <span class="accent">You Don't Know Jack.</span>
-        </h1>
-        <p class="hero-subtitle">
-          Premium real estate services on the Sunshine Coast.<br/>
-          Delivering exceptional results with 20+ years of expertise.
-        </p>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Get Started</a>
-          <a href="/about" class="btn btn-secondary">Learn More</a>
+  <!-- Reduced hero - information-dense, less height -->
+  <section class="bg-gradient-to-br from-charcoal to-charcoal-light text-stone-warm">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8 py-16 md:py-20">
+      <!-- Tighter grid layout for hero content -->
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
+        <!-- Primary content - 3 columns -->
+        <div class="lg:col-span-3">
+          <h1 class="font-serif text-4xl md:text-5xl font-bold text-white leading-tight mb-4">
+            Think You Know Property?<br/>
+            <span class="text-champagne-light">You Don't Know Jack.</span>
+          </h1>
+          <!-- Custom text-body-lg from tailwind.config.js: 1.0625rem/1.8 line-height for emphasized readability -->
+          <p class="text-body-lg text-stone/90 mb-6 max-w-2xl">
+            Premium real estate services on the Sunshine Coast. Delivering exceptional results with 20+ years of expertise honed in Sydney's most competitive markets.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#contact" class="inline-flex items-center px-5 py-2.5 text-sm font-semibold text-charcoal bg-champagne hover:bg-champagne-dark transition-all duration-200 rounded">
+              Get Started
+            </a>
+            <a href="/about" class="inline-flex items-center px-5 py-2.5 text-sm font-semibold text-white border-2 border-white/80 hover:bg-white hover:text-charcoal transition-all duration-200 rounded">
+              Learn More
+            </a>
+          </div>
         </div>
-      </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <div class="stat-number">20+</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">500+</div>
-          <div class="stat-label">Properties Sold</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">#1</div>
-          <div class="stat-label">Client Satisfaction</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section class="services">
-    <div class="container">
-      <h2 class="section-title">How I Can Help</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🏡</div>
-          <h3>Selling Your Property</h3>
-          <p>Maximize your property's value with strategic marketing, emotional storytelling, and expert negotiation skills honed in Sydney's competitive markets.</p>
-          <a href="#contact" class="service-link">Get Your Free Appraisal →</a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🔍</div>
-          <h3>Buyer's Advocate</h3>
-          <p>Your trusted partner in finding the perfect Sunshine Coast property. Benefit from deep market insights and hyperlocal knowledge to buy with confidence.</p>
-          <a href="#contact" class="service-link">Start Your Search →</a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">💼</div>
-          <h3>Market Insights</h3>
-          <p>Data-driven property analysis and strategic guidance to help you make informed decisions in one of Australia's fastest-growing regions.</p>
-          <a href="/blog" class="service-link">Read Latest Insights →</a>
+        
+        <!-- Stats sidebar - 2 columns, information-dense -->
+        <div class="lg:col-span-2">
+          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6 space-y-4 border border-white/20">
+            <div class="grid grid-cols-3 lg:grid-cols-1 gap-4">
+              <div class="text-center lg:text-left">
+                <div class="font-serif text-3xl font-bold text-champagne-light">20+</div>
+                <div class="text-xs text-stone/80 uppercase tracking-wide mt-1">Years Experience</div>
+              </div>
+              <div class="text-center lg:text-left">
+                <div class="font-serif text-3xl font-bold text-champagne-light">500+</div>
+                <div class="text-xs text-stone/80 uppercase tracking-wide mt-1">Properties Sold</div>
+              </div>
+              <div class="text-center lg:text-left">
+                <div class="font-serif text-3xl font-bold text-champagne-light">#1</div>
+                <div class="text-xs text-stone/80 uppercase tracking-wide mt-1">Client Satisfaction</div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Why Sunshine Coast Section -->
-  <section class="why-sunshine-coast">
-    <div class="container">
-      <h2 class="section-title">Why the Sunshine Coast?</h2>
-      <div class="features-grid">
-        <div class="feature">
-          <h3>🌊 Lifestyle</h3>
-          <p>Beautiful beaches, vibrant communities, and a stress-free pace of life that attracts families from across Australia.</p>
+  <!-- Services - Three-column grid, information-rich -->
+  <section class="section-moderate bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="font-serif text-3xl md:text-4xl font-semibold text-charcoal mb-3">How I Can Help</h2>
+        <p class="text-sm text-graphite-light max-w-2xl mx-auto">Comprehensive property services backed by metropolitan expertise and local market knowledge</p>
+      </div>
+      
+      <!-- Dense 3-column service cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1: Selling -->
+        <div class="bg-stone-warm border border-stone-cool rounded p-6 hover:shadow-premium-md transition-shadow duration-200">
+          <div class="mb-3">
+            <div class="inline-flex items-center justify-center w-10 h-10 bg-champagne/20 text-champagne text-xl rounded">🏡</div>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-charcoal mb-2">Selling Your Property</h3>
+          <p class="text-sm text-graphite-light leading-relaxed mb-4">
+            Maximize your property's value with strategic marketing, emotional storytelling, and expert negotiation skills honed in Sydney's competitive markets.
+          </p>
+          <a href="#contact" class="text-sm font-semibold text-charcoal-light hover:text-champagne transition-colors duration-200">
+            Get Your Free Appraisal →
+          </a>
         </div>
-        <div class="feature">
-          <h3>📈 Growth Potential</h3>
-          <p>With incoming investments and infrastructure projects, the Sunshine Coast is a hotbed for sustainable property growth.</p>
+
+        <!-- Card 2: Buyer's Advocate -->
+        <div class="bg-stone-warm border border-stone-cool rounded p-6 hover:shadow-premium-md transition-shadow duration-200">
+          <div class="mb-3">
+            <div class="inline-flex items-center justify-center w-10 h-10 bg-champagne/20 text-champagne text-xl rounded">🔍</div>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-charcoal mb-2">Buyer's Advocate</h3>
+          <p class="text-sm text-graphite-light leading-relaxed mb-4">
+            Your trusted partner in finding the perfect Sunshine Coast property. Benefit from deep market insights and hyperlocal knowledge to buy with confidence.
+          </p>
+          <a href="#contact" class="text-sm font-semibold text-charcoal-light hover:text-champagne transition-colors duration-200">
+            Start Your Search →
+          </a>
         </div>
-        <div class="feature">
-          <h3>👨‍👩‍👧‍👦 Family-Friendly</h3>
-          <p>Top-rated schools, parks, and community-focused living make this the perfect place to raise a family.</p>
-        </div>
-        <div class="feature">
-          <h3>🏖️ Beachside Living</h3>
-          <p>From Mooloolaba's relaxed charm to Maroochydore's dynamic community, find your perfect coastal lifestyle.</p>
+
+        <!-- Card 3: Market Insights -->
+        <div class="bg-stone-warm border border-stone-cool rounded p-6 hover:shadow-premium-md transition-shadow duration-200">
+          <div class="mb-3">
+            <div class="inline-flex items-center justify-center w-10 h-10 bg-champagne/20 text-champagne text-xl rounded">💼</div>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-charcoal mb-2">Market Insights</h3>
+          <p class="text-sm text-graphite-light leading-relaxed mb-4">
+            Data-driven property analysis and strategic guidance to help you make informed decisions in one of Australia's fastest-growing regions.
+          </p>
+          <a href="/blog" class="text-sm font-semibold text-charcoal-light hover:text-champagne transition-colors duration-200">
+            Read Latest Insights →
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- About Preview Section -->
-  <section class="about-preview">
-    <div class="container about-content">
-      <div class="about-text">
-        <h2>About Jack McGhee</h2>
-        <p>
-          I'm Jack McGhee, a senior real estate professional with over 20 years of experience 
-          delivering premium results in Australia's most competitive property markets.
-        </p>
-        <p>
-          After relocating to the Sunshine Coast with my young family, I'm now proud to call 
-          Mooloolaba home and bring metropolitan expertise to a community I've long admired.
-        </p>
-        <a href="/about" class="btn btn-primary">Read My Story</a>
+  <!-- Why Sunshine Coast - Two-column feature grid for density -->
+  <section class="section-moderate bg-stone">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="mb-8">
+        <h2 class="font-serif text-3xl md:text-4xl font-semibold text-charcoal mb-3">Why the Sunshine Coast?</h2>
+        <p class="text-sm text-graphite-light max-w-3xl">Four compelling reasons this region continues to attract discerning buyers and astute investors</p>
       </div>
-      <div class="about-image">
-        <div class="image-placeholder">
-          <span>Jack McGhee</span>
+      
+      <!-- Dense 2x2 grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white border-l-4 border-champagne rounded p-5">
+          <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">🌊 Lifestyle</h3>
+          <p class="text-sm text-graphite-light leading-relaxed">
+            Beautiful beaches, vibrant communities, and a stress-free pace of life that attracts families from across Australia.
+          </p>
+        </div>
+
+        <div class="bg-white border-l-4 border-champagne rounded p-5">
+          <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">📈 Growth Potential</h3>
+          <p class="text-sm text-graphite-light leading-relaxed">
+            With incoming investments and infrastructure projects, the Sunshine Coast is a hotbed for sustainable property growth.
+          </p>
+        </div>
+
+        <div class="bg-white border-l-4 border-champagne rounded p-5">
+          <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">👨‍👩‍👧‍👦 Family-Friendly</h3>
+          <p class="text-sm text-graphite-light leading-relaxed">
+            Top-rated schools, parks, and community-focused living make this the perfect place to raise a family.
+          </p>
+        </div>
+
+        <div class="bg-white border-l-4 border-champagne rounded p-5">
+          <h3 class="font-serif text-lg font-semibold text-charcoal mb-2">🏖️ Beachside Living</h3>
+          <p class="text-sm text-graphite-light leading-relaxed">
+            From Mooloolaba's relaxed charm to Maroochydore's dynamic community, find your perfect coastal lifestyle.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Recent Blog Posts -->
-  <section class="blog-preview">
-    <div class="container">
-      <h2 class="section-title">Latest Insights</h2>
-      <div class="blog-grid">
-        <article class="blog-card">
-          <div class="blog-image-placeholder"></div>
-          <div class="blog-content">
-            <span class="blog-date">December 2025</span>
-            <h3>The Sunshine Coast Property Market: 2026 Outlook</h3>
-            <p>Discover the trends shaping the Sunshine Coast real estate market and what they mean for buyers and sellers...</p>
-            <a href="/blog/sunshine-coast-market-outlook-2026" class="blog-link">Read More →</a>
+  <!-- About Preview - Two-column with image -->
+  <section class="section-moderate bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <!-- Text content -->
+        <div>
+          <h2 class="font-serif text-3xl md:text-4xl font-semibold text-charcoal mb-4">About Jack McGhee</h2>
+          <div class="space-y-3 text-sm text-graphite-light leading-relaxed">
+            <p>
+              I'm Jack McGhee, a senior real estate professional with over 20 years of experience 
+              delivering premium results in Australia's most competitive property markets.
+            </p>
+            <p>
+              After relocating to the Sunshine Coast with my young family, I'm now proud to call 
+              Mooloolaba home and bring metropolitan expertise to a community I've long admired.
+            </p>
+            <p class="font-medium text-charcoal-light">
+              My approach combines disciplined strategy, decisive negotiation, and deep understanding of buyer behaviour—ensuring you reduce uncertainty and maximize value.
+            </p>
+          </div>
+          <a href="/about" class="inline-flex items-center px-5 py-2.5 text-sm font-semibold text-charcoal bg-champagne hover:bg-champagne-dark transition-all duration-200 rounded mt-6">
+            Read My Story
+          </a>
+        </div>
+        
+        <!-- Image placeholder -->
+        <div class="relative">
+          <div class="aspect-[4/5] bg-gradient-to-br from-charcoal-light to-charcoal rounded-lg flex items-center justify-center">
+            <span class="font-serif text-2xl text-champagne-light">Jack McGhee</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Recent Blog Posts - Information-dense cards -->
+  <section class="section-moderate bg-stone">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center mb-8">
+        <h2 class="font-serif text-3xl md:text-4xl font-semibold text-charcoal mb-2">Latest Insights</h2>
+        <p class="text-sm text-graphite-light">Expert analysis and market perspectives from Jack McGhee</p>
+      </div>
+      
+      <!-- Two-column blog preview -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <!-- Blog card 1 -->
+        <article class="bg-white rounded overflow-hidden hover:shadow-premium-md transition-shadow duration-200">
+          <div class="h-40 bg-gradient-to-br from-charcoal-light to-stone-cool"></div>
+          <div class="p-6">
+            <span class="inline-block text-xs font-semibold text-champagne uppercase tracking-wider mb-2">December 2025</span>
+            <h3 class="font-serif text-xl font-semibold text-charcoal mb-2 leading-tight">The Sunshine Coast Property Market: 2026 Outlook</h3>
+            <p class="text-sm text-graphite-light leading-relaxed mb-3">
+              Discover the trends shaping the Sunshine Coast real estate market and what they mean for buyers and sellers...
+            </p>
+            <a href="/blog/sunshine-coast-market-outlook-2026" class="text-sm font-semibold text-charcoal-light hover:text-champagne transition-colors duration-200">
+              Read More →
+            </a>
           </div>
         </article>
-        <article class="blog-card">
-          <div class="blog-image-placeholder"></div>
-          <div class="blog-content">
-            <span class="blog-date">November 2025</span>
-            <h3>5 Tips for First-Time Home Buyers</h3>
-            <p>Navigating your first property purchase can be overwhelming. Here's my expert advice to make it seamless...</p>
-            <a href="/blog/first-time-buyer-tips" class="blog-link">Read More →</a>
+
+        <!-- Blog card 2 -->
+        <article class="bg-white rounded overflow-hidden hover:shadow-premium-md transition-shadow duration-200">
+          <div class="h-40 bg-gradient-to-br from-charcoal-light to-stone-cool"></div>
+          <div class="p-6">
+            <span class="inline-block text-xs font-semibold text-champagne uppercase tracking-wider mb-2">November 2025</span>
+            <h3 class="font-serif text-xl font-semibold text-charcoal mb-2 leading-tight">5 Tips for First-Time Home Buyers</h3>
+            <p class="text-sm text-graphite-light leading-relaxed mb-3">
+              Navigating your first property purchase can be overwhelming. Here's my expert advice to make it seamless...
+            </p>
+            <a href="/blog/first-time-buyer-tips" class="text-sm font-semibold text-charcoal-light hover:text-champagne transition-colors duration-200">
+              Read More →
+            </a>
           </div>
         </article>
       </div>
-      <div style="text-align: center; margin-top: 2rem;">
-        <a href="/blog" class="btn btn-secondary">View All Articles</a>
+      
+      <div class="text-center">
+        <a href="/blog" class="inline-flex items-center px-5 py-2.5 text-sm font-semibold text-charcoal border-2 border-charcoal hover:bg-charcoal hover:text-white transition-all duration-200 rounded">
+          View All Articles
+        </a>
       </div>
     </div>
   </section>
-
-  <style>
-    /* Page-specific styles for homepage */
-    .hero {
-      background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-blue) 100%);
-      color: var(--white);
-      padding: var(--spacing-3xl) 0 var(--spacing-2xl);
-      margin-top: -1px;
-    }
-
-    .hero-content {
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-xl);
-    }
-
-    .hero-text {
-      text-align: center;
-    }
-
-    .hero-title {
-      font-size: 3.5rem;
-      margin-bottom: var(--spacing-md);
-      line-height: 1.1;
-    }
-
-    .hero-title .accent {
-      color: var(--gold-light);
-      display: block;
-      margin-top: var(--spacing-xs);
-    }
-
-    .hero-subtitle {
-      font-size: 1.25rem;
-      color: var(--sand-warm);
-      margin-bottom: var(--spacing-lg);
-      font-weight: 300;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: var(--spacing-sm);
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: var(--spacing-lg);
-      padding: var(--spacing-lg);
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: var(--radius-md);
-      backdrop-filter: blur(10px);
-    }
-
-    .stat {
-      text-align: center;
-    }
-
-    .stat-number {
-      font-size: 2.5rem;
-      font-weight: 700;
-      color: var(--gold-light);
-      font-family: var(--font-serif);
-    }
-
-    .stat-label {
-      font-size: 0.9rem;
-      color: var(--sand-warm);
-      margin-top: var(--spacing-xs);
-    }
-
-    .services {
-      padding: var(--spacing-3xl) 0;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: var(--spacing-lg);
-    }
-
-    .why-sunshine-coast {
-      padding: var(--spacing-3xl) 0;
-      background: var(--sand-warm);
-    }
-
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: var(--spacing-lg);
-    }
-
-    .about-preview {
-      padding: var(--spacing-3xl) 0;
-    }
-
-    .about-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--spacing-2xl);
-      align-items: center;
-    }
-
-    .about-text h2 {
-      color: var(--ocean-deep);
-      font-size: 2.5rem;
-      margin-bottom: var(--spacing-md);
-    }
-
-    .about-text p {
-      color: var(--text-light);
-      margin-bottom: var(--spacing-sm);
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
-
-    .about-text .btn {
-      margin-top: var(--spacing-sm);
-    }
-
-    .blog-preview {
-      padding: var(--spacing-3xl) 0;
-      background: var(--sand-light);
-    }
-
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: var(--spacing-lg);
-    }
-
-    @media (max-width: 768px) {
-      .hero-title {
-        font-size: 2.5rem;
-      }
-
-      .hero-subtitle {
-        font-size: 1.1rem;
-      }
-
-      .about-content {
-        grid-template-columns: 1fr;
-      }
-
-      .services-grid,
-      .features-grid,
-      .blog-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </Layout>

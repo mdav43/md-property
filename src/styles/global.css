@@ -1,7 +1,57 @@
-/* Global Styles - Foundational CSS */
+/* Global Styles - Premium Luxury Foundation with Tailwind */
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* Premium typography with increased density */
+  html {
+    scroll-behavior: smooth;
+    @apply text-body;
+  }
+
+  body {
+    @apply font-sans text-graphite bg-stone-warm antialiased;
+    line-height: 1.7;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-semibold text-charcoal;
+    line-height: 1.2;
+  }
+
+  h1 { @apply text-4xl md:text-5xl; }
+  h2 { @apply text-3xl md:text-4xl; }
+  h3 { @apply text-2xl md:text-3xl; }
+  h4 { @apply text-xl md:text-2xl; }
+  h5 { @apply text-lg md:text-xl; }
+  h6 { @apply text-base md:text-lg; }
+
+  /* Premium link styling - subtle and refined */
+  a {
+    @apply transition-colors duration-200;
+  }
+}
+
+@layer components {
+  /* Container with moderate width for information density */
+  .container-premium {
+    @apply max-w-7xl mx-auto px-6 lg:px-8;
+  }
+
+  /* Tight spacing for dense layouts */
+  .section-tight {
+    @apply py-12 md:py-16;
+  }
+
+  .section-moderate {
+    @apply py-16 md:py-20;
+  }
+}
+
+/* Custom CSS variables for backwards compatibility with existing styles */
 :root {
-  /* Sunshine Coast inspired luxury palette */
   --ocean-deep: #0A2E4D;
   --ocean-blue: #1A5F7A;
   --ocean-light: #86BBD8;
@@ -13,11 +63,9 @@
   --text-dark: #2C2C2C;
   --text-light: #666666;
   
-  /* Typography */
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;
   
-  /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
@@ -26,20 +74,16 @@
   --spacing-2xl: 4rem;
   --spacing-3xl: 6rem;
   
-  /* Border Radius */
   --radius-sm: 4px;
   --radius-md: 8px;
   
-  /* Shadows */
   --shadow-sm: 0 2px 20px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.15);
   
-  /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-base: 0.3s ease;
   
-  /* Borders */
   --border-accent-width: 4px;
 }
 
@@ -47,23 +91,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-sans);
-  color: var(--text-dark);
-  line-height: 1.6;
-  background-color: var(--sand-light);
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-serif);
-  font-weight: 600;
-  line-height: 1.2;
 }
 
 .container {

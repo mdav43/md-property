@@ -1,138 +1,98 @@
-/* Blog Post Styles - Shared across all blog posts */
+/* Blog Post Styles - Premium, information-dense layout */
 
 .blog-post {
-  padding: var(--spacing-2xl) 0;
+  @apply py-16 bg-white;
 }
 
 .blog-post .container {
-  max-width: 800px;
+  @apply max-w-4xl mx-auto px-6 lg:px-8;
 }
 
 .post-header {
-  text-align: center;
-  margin-bottom: var(--spacing-xl);
+  @apply text-center mb-10 pb-8 border-b border-stone-cool;
 }
 
 .post-date {
-  color: var(--gold-accent);
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  @apply inline-block text-xs font-semibold text-champagne uppercase tracking-wider mb-3;
 }
 
 .post-header h1 {
-  color: var(--ocean-deep);
-  font-size: 2.5rem;
-  margin: var(--spacing-sm) 0;
-  line-height: 1.2;
+  @apply font-serif text-3xl md:text-4xl font-bold text-charcoal mb-3 leading-tight;
 }
 
 .post-meta {
-  color: var(--text-light);
-  font-size: 0.95rem;
+  @apply text-sm text-graphite-light;
 }
 
 .post-image-placeholder {
-  height: 400px;
-  background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--ocean-light) 100%);
-  border-radius: var(--radius-md);
-  margin-bottom: var(--spacing-xl);
+  @apply h-64 md:h-80 bg-gradient-to-br from-charcoal-light to-charcoal rounded-lg mb-10;
 }
 
+/* Dense, scannable content with excellent hierarchy */
 .post-content {
-  color: var(--text-dark);
-  font-size: 1.1rem;
-  line-height: 1.8;
+  @apply text-graphite-light leading-relaxed;
 }
 
 .post-content h2 {
-  color: var(--ocean-deep);
-  font-size: 1.75rem;
-  margin: 2.5rem 0 var(--spacing-sm);
+  @apply font-serif text-2xl md:text-3xl font-semibold text-charcoal mt-12 mb-4 pt-8 border-t border-stone-cool;
 }
 
 .post-content h3 {
-  color: var(--ocean-blue);
-  font-size: 1.4rem;
-  margin: var(--spacing-lg) 0 var(--spacing-sm);
+  @apply font-serif text-xl md:text-2xl font-semibold text-charcoal-light mt-8 mb-3;
 }
 
 .post-content p {
-  margin-bottom: var(--spacing-md);
-  color: var(--text-light);
+  @apply mb-4 text-sm leading-relaxed;
 }
 
+/* Use Tailwind's list-disc with custom marker color for better maintainability */
 .post-content ul {
-  margin: var(--spacing-md) 0;
-  padding-left: var(--spacing-lg);
+  @apply my-5 ml-6 space-y-2 list-disc marker:text-champagne;
 }
 
 .post-content li {
-  margin-bottom: var(--spacing-sm);
-  color: var(--text-light);
+  @apply text-sm leading-relaxed pl-2;
 }
 
 .post-content strong {
-  color: var(--ocean-deep);
-  font-weight: 600;
+  @apply text-charcoal font-semibold;
 }
 
+/* Information-rich callout boxes */
 .post-cta {
-  background: var(--sand-warm);
-  padding: var(--spacing-xl);
-  border-radius: var(--radius-md);
-  text-align: center;
-  margin: var(--spacing-2xl) 0;
-  border-left: var(--border-accent-width) solid var(--gold-accent);
+  @apply bg-stone rounded-lg p-8 text-center my-12 border-l-4 border-champagne shadow-premium;
 }
 
 .post-cta h3 {
-  color: var(--ocean-deep);
-  font-size: 1.5rem;
-  margin-bottom: var(--spacing-sm);
+  @apply font-serif text-xl md:text-2xl font-semibold text-charcoal mb-3 mt-0 pt-0 border-0;
 }
 
 .post-cta p {
-  color: var(--text-light);
-  margin-bottom: var(--spacing-lg);
+  @apply text-sm text-graphite-light mb-6;
 }
 
 .post-nav {
-  margin-top: var(--spacing-2xl);
-  padding-top: var(--spacing-lg);
-  border-top: 1px solid var(--sand-warm);
+  @apply mt-12 pt-6 border-t border-stone-cool;
 }
 
 .back-link {
-  color: var(--ocean-blue);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color var(--transition-base);
-}
-
-.back-link:hover {
-  color: var(--gold-accent);
+  @apply text-sm font-semibold text-charcoal-light hover:text-champagne transition-colors duration-200 no-underline;
 }
 
 @media (max-width: 768px) {
   .post-header h1 {
-    font-size: 2rem;
-  }
-
-  .post-content {
-    font-size: 1rem;
+    @apply text-2xl;
   }
 
   .post-content h2 {
-    font-size: 1.5rem;
+    @apply text-xl;
   }
 
   .post-content h3 {
-    font-size: 1.25rem;
+    @apply text-lg;
   }
 
   .post-image-placeholder {
-    height: 250px;
+    @apply h-48;
   }
 }
