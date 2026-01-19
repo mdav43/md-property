@@ -1,0 +1,35 @@
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>{{ site.title }}</h4>
+        <p>{{ site.description }}</p>
+        <div class="social-links">
+          <a href="{{ site.social.facebook }}" aria-label="Facebook">f</a>
+          <a href="{{ site.social.instagram }}" aria-label="Instagram">📷</a>
+          <a href="{{ site.social.linkedin }}" aria-label="LinkedIn">in</a>
+        </div>
+      </div>
+      
+        <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="{{ '/' | relative_url }}">Home</a></li>
+          <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+          <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p>📧 {{ site.email }}</p>
+        <p>📞 {{ site.phone }}</p>
+        <p>📍 {{ site.address }}</p>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }}. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

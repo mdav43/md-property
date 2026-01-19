@@ -1,0 +1,48 @@
+# Site settings
+title: MD Property
+tagline: Sunshine Coast Property Specialists
+description: Professional real estate services on the beautiful Sunshine Coast
+baseurl: ""
+url: "https://mdav43.github.io/md-property"
+
+# Contact information
+email: contact@mdproperty.com.au
+phone: "+61 (0) XXX XXX XXX"
+address: "Sunshine Coast, Queensland, Australia"
+
+# Social media
+social:
+  facebook: "#"
+  instagram: "#"
+  linkedin: "#"
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .sass-cache
+  - .jekyll-cache
