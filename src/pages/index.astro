@@ -275,12 +275,34 @@ import Layout from '../layouts/Layout.astro';
     }
 
     @media (max-width: 768px) {
+      .hero {
+        padding: var(--spacing-2xl) 0 var(--spacing-xl);
+      }
+
       .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
       }
 
       .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .stat-number {
+        font-size: 2rem;
+      }
+
+      .stat-label {
+        font-size: 0.85rem;
       }
 
       .about-content {
@@ -291,6 +313,55 @@ import Layout from '../layouts/Layout.astro';
       .features-grid,
       .blog-grid {
         grid-template-columns: 1fr;
+      }
+
+      .service-card,
+      .feature {
+        padding: var(--spacing-md);
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+      }
+
+      .services,
+      .why-sunshine-coast,
+      .about-preview,
+      .blog-preview {
+        padding: var(--spacing-2xl) 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: var(--spacing-xl) 0 var(--spacing-lg);
+      }
+
+      .hero-title {
+        font-size: 1.75rem;
+      }
+
+      .hero-subtitle {
+        font-size: 0.95rem;
+      }
+
+      .stat-number {
+        font-size: 1.75rem;
+      }
+
+      .stat-label {
+        font-size: 0.8rem;
+      }
+
+      .section-title {
+        font-size: 1.5rem;
+      }
+
+      .services,
+      .why-sunshine-coast,
+      .about-preview,
+      .blog-preview {
+        padding: var(--spacing-xl) 0;
       }
     }
   </style>
