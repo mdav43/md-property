@@ -2,152 +2,107 @@
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Blog" description="Expert real estate insights and market analysis for the Sunshine Coast">
-  <section class="blog-hero">
-    <div class="container">
-      <h1>Market Insights & Blog</h1>
-      <p>Expert analysis and advice from Jack McGhee</p>
+<Layout title="Market Insights" description="Expert real estate insights and market analysis for the Sunshine Coast">
+  <!-- Reduced hero -->
+  <section class="bg-gradient-to-br from-charcoal to-charcoal-light text-stone-warm py-14">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <h1 class="font-serif text-4xl md:text-5xl font-bold text-white mb-2">Market Insights & Analysis</h1>
+      <p class="text-base text-stone/90">Expert perspectives and data-driven advice from Jack McGhee</p>
     </div>
   </section>
 
-  <section class="blog-content">
-    <div class="container">
-      <div class="blog-grid">
-        <article class="blog-card">
-          <div class="blog-image-placeholder"></div>
-          <div class="blog-content-inner">
-            <span class="blog-date">December 2025</span>
-            <h2><a href="/blog/sunshine-coast-market-outlook-2026">The Sunshine Coast Property Market: 2026 Outlook</a></h2>
-            <p>
+  <!-- Information-dense blog grid -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <!-- Two-column grid for information density -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        
+        <!-- Article 1 -->
+        <article class="bg-stone-warm border border-stone-cool rounded overflow-hidden hover:shadow-premium-md transition-shadow duration-200">
+          <div class="h-44 bg-gradient-to-br from-charcoal-light to-stone-cool"></div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-block text-xs font-semibold text-champagne uppercase tracking-wider">December 2025</span>
+              <span class="text-xs text-graphite-light">5 min read</span>
+            </div>
+            <h2 class="font-serif text-2xl font-semibold text-charcoal mb-3 leading-tight">
+              <a href="/blog/sunshine-coast-market-outlook-2026" class="hover:text-champagne transition-colors duration-200">
+                The Sunshine Coast Property Market: 2026 Outlook
+              </a>
+            </h2>
+            <p class="text-sm text-graphite-light leading-relaxed mb-4">
               As we enter 2026, the Sunshine Coast continues to be one of Australia's most dynamic 
               property markets. Discover the key trends shaping the region and what they mean for 
               buyers and sellers in the year ahead.
             </p>
-            <a href="/blog/sunshine-coast-market-outlook-2026" class="read-more">Read More →</a>
+            <a href="/blog/sunshine-coast-market-outlook-2026" class="text-sm font-semibold text-charcoal-light hover:text-champagne transition-colors duration-200">
+              Read Full Article →
+            </a>
           </div>
         </article>
 
-        <article class="blog-card">
-          <div class="blog-image-placeholder"></div>
-          <div class="blog-content-inner">
-            <span class="blog-date">November 2025</span>
-            <h2><a href="/blog/first-time-buyer-tips">5 Essential Tips for First-Time Home Buyers</a></h2>
-            <p>
+        <!-- Article 2 -->
+        <article class="bg-stone-warm border border-stone-cool rounded overflow-hidden hover:shadow-premium-md transition-shadow duration-200">
+          <div class="h-44 bg-gradient-to-br from-charcoal-light to-stone-cool"></div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-block text-xs font-semibold text-champagne uppercase tracking-wider">November 2025</span>
+              <span class="text-xs text-graphite-light">4 min read</span>
+            </div>
+            <h2 class="font-serif text-2xl font-semibold text-charcoal mb-3 leading-tight">
+              <a href="/blog/first-time-buyer-tips" class="hover:text-champagne transition-colors duration-200">
+                5 Essential Tips for First-Time Home Buyers
+              </a>
+            </h2>
+            <p class="text-sm text-graphite-light leading-relaxed mb-4">
               Navigating your first property purchase can be overwhelming, but it doesn't have to be. 
               Here's my expert advice to make your first home buying experience smooth and successful.
             </p>
-            <a href="/blog/first-time-buyer-tips" class="read-more">Read More →</a>
+            <a href="/blog/first-time-buyer-tips" class="text-sm font-semibold text-charcoal-light hover:text-champagne transition-colors duration-200">
+              Read Full Article →
+            </a>
           </div>
         </article>
 
-        <article class="blog-card">
-          <div class="blog-image-placeholder"></div>
-          <div class="blog-content-inner">
-            <span class="blog-date">October 2025</span>
-            <h2><a href="/blog/selling-property-sunshine-coast">Selling Your Property on the Sunshine Coast: A Strategic Guide</a></h2>
-            <p>
+        <!-- Article 3 -->
+        <article class="bg-stone-warm border border-stone-cool rounded overflow-hidden hover:shadow-premium-md transition-shadow duration-200">
+          <div class="h-44 bg-gradient-to-br from-charcoal-light to-stone-cool"></div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-block text-xs font-semibold text-champagne uppercase tracking-wider">October 2025</span>
+              <span class="text-xs text-graphite-light">6 min read</span>
+            </div>
+            <h2 class="font-serif text-2xl font-semibold text-charcoal mb-3 leading-tight">
+              <a href="/blog/selling-property-sunshine-coast" class="hover:text-champagne transition-colors duration-200">
+                Selling Your Property on the Sunshine Coast: A Strategic Guide
+              </a>
+            </h2>
+            <p class="text-sm text-graphite-light leading-relaxed mb-4">
               Learn the proven strategies that maximize property value in the Sunshine Coast market, 
               from presentation and marketing to negotiation and closing.
             </p>
-            <a href="/blog/selling-property-sunshine-coast" class="read-more">Read More →</a>
+            <a href="/blog/selling-property-sunshine-coast" class="text-sm font-semibold text-charcoal-light hover:text-champagne transition-colors duration-200">
+              Read Full Article →
+            </a>
+          </div>
+        </article>
+
+        <!-- Placeholder for future article -->
+        <article class="bg-stone-warm border border-stone-cool rounded overflow-hidden opacity-60">
+          <div class="h-44 bg-gradient-to-br from-stone-cool to-stone"></div>
+          <div class="p-6">
+            <div class="flex items-center justify-between mb-2">
+              <span class="inline-block text-xs font-semibold text-graphite uppercase tracking-wider">Coming Soon</span>
+            </div>
+            <h2 class="font-serif text-2xl font-semibold text-graphite mb-3 leading-tight">
+              More Insights Coming Soon
+            </h2>
+            <p class="text-sm text-graphite-light leading-relaxed">
+              Stay tuned for more expert analysis, market updates, and strategic guidance for the Sunshine Coast property market.
+            </p>
           </div>
         </article>
       </div>
     </div>
   </section>
-
-  <style>
-    /* Page-specific styles for blog page */
-    .blog-hero {
-      background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-blue) 100%);
-      color: var(--white);
-      padding: var(--spacing-2xl) 0;
-      text-align: center;
-      margin-top: -1px;
-    }
-
-    .blog-hero h1 {
-      font-size: 3rem;
-      margin-bottom: var(--spacing-sm);
-    }
-
-    .blog-hero p {
-      font-size: 1.25rem;
-      color: var(--sand-warm);
-    }
-
-    .blog-content {
-      padding: var(--spacing-2xl) 0;
-    }
-
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-      gap: var(--spacing-lg);
-    }
-
-    .blog-card {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .blog-image-placeholder {
-      height: 250px;
-      background: linear-gradient(135deg, var(--ocean-light) 0%, var(--sand-warm) 100%);
-    }
-
-    .blog-content-inner {
-      padding: var(--spacing-lg);
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .blog-date {
-      margin-bottom: var(--spacing-sm);
-    }
-
-    .blog-card h2 {
-      margin-bottom: var(--spacing-sm);
-    }
-
-    .blog-card h2 a {
-      color: var(--ocean-deep);
-      text-decoration: none;
-      font-size: 1.5rem;
-      transition: color var(--transition-base);
-    }
-
-    .blog-card h2 a:hover {
-      color: var(--ocean-blue);
-    }
-
-    .blog-card p {
-      color: var(--text-light);
-      line-height: 1.7;
-      margin-bottom: var(--spacing-md);
-      flex: 1;
-    }
-
-    .read-more {
-      color: var(--ocean-blue);
-      text-decoration: none;
-      font-weight: 600;
-      transition: color var(--transition-base);
-    }
-
-    .read-more:hover {
-      color: var(--gold-accent);
-    }
-
-    @media (max-width: 768px) {
-      .blog-hero h1 {
-        font-size: 2rem;
-      }
-
-      .blog-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </Layout>
