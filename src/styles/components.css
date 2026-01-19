@@ -199,7 +199,10 @@
     font-size: 1.5rem;
   }
 
-  .service-card,
+  .service-card {
+    padding: var(--spacing-sm);
+  }
+
   .feature {
     padding: var(--spacing-sm);
   }

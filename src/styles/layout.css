@@ -169,7 +169,7 @@
 
 @media (max-width: 480px) {
   .nav-links {
-    gap: 0.5rem;
+    gap: var(--spacing-xs);
   }
 
   .nav-links a {
@@ -177,7 +177,7 @@
   }
 
   .contact-btn {
-    padding: 0.4rem 0.6rem;
+    padding: var(--spacing-xs) var(--spacing-sm);
     font-size: 0.8rem;
   }
 
