@@ -138,17 +138,18 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <style>
+    /* Page-specific styles for about page */
     .about-hero {
       background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-blue) 100%);
       color: var(--white);
-      padding: 4rem 0;
+      padding: var(--spacing-2xl) 0;
       text-align: center;
       margin-top: -1px;
     }
 
     .about-hero h1 {
       font-size: 3rem;
-      margin-bottom: 1rem;
+      margin-bottom: var(--spacing-sm);
     }
 
     .tagline {
@@ -159,7 +160,7 @@ import Layout from '../layouts/Layout.astro';
     }
 
     .about-content {
-      padding: 4rem 0;
+      padding: var(--spacing-2xl) 0;
     }
 
     .content-wrapper {
@@ -169,15 +170,15 @@ import Layout from '../layouts/Layout.astro';
     .profile-section {
       display: grid;
       grid-template-columns: 1fr 2fr;
-      gap: 3rem;
-      margin-bottom: 4rem;
+      gap: var(--spacing-xl);
+      margin-bottom: var(--spacing-2xl);
       align-items: start;
     }
 
     .profile-image .image-placeholder {
       aspect-ratio: 3/4;
       background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--ocean-light) 100%);
-      border-radius: 8px;
+      border-radius: var(--radius-md);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -189,12 +190,12 @@ import Layout from '../layouts/Layout.astro';
     .profile-text h2 {
       color: var(--ocean-deep);
       font-size: 2rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: var(--spacing-md);
     }
 
     .profile-text p {
       color: var(--text-light);
-      margin-bottom: 1.5rem;
+      margin-bottom: var(--spacing-md);
       font-size: 1.05rem;
       line-height: 1.8;
     }
@@ -202,7 +203,7 @@ import Layout from '../layouts/Layout.astro';
     .journey-section,
     .approach-section,
     .services-section {
-      margin-bottom: 4rem;
+      margin-bottom: var(--spacing-2xl);
     }
 
     .journey-section h2,
@@ -210,13 +211,13 @@ import Layout from '../layouts/Layout.astro';
     .services-section h2 {
       color: var(--ocean-deep);
       font-size: 2rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: var(--spacing-md);
     }
 
     .journey-section p,
     .services-section p {
       color: var(--text-light);
-      margin-bottom: 1.5rem;
+      margin-bottom: var(--spacing-md);
       font-size: 1.05rem;
       line-height: 1.8;
     }
@@ -224,21 +225,21 @@ import Layout from '../layouts/Layout.astro';
     .approach-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-      margin-top: 2rem;
+      gap: var(--spacing-lg);
+      margin-top: var(--spacing-lg);
     }
 
     .approach-card {
       background: var(--sand-warm);
-      padding: 2rem;
-      border-radius: 8px;
+      padding: var(--spacing-lg);
+      border-radius: var(--radius-md);
       border-left: 4px solid var(--gold-accent);
     }
 
     .approach-card h3 {
       color: var(--ocean-deep);
       font-size: 1.15rem;
-      margin-bottom: 1rem;
+      margin-bottom: var(--spacing-sm);
     }
 
     .approach-card p {
@@ -249,22 +250,22 @@ import Layout from '../layouts/Layout.astro';
 
     .service-detail {
       background: var(--white);
-      padding: 2rem;
-      border-radius: 8px;
-      margin-bottom: 2rem;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      padding: var(--spacing-lg);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--spacing-lg);
+      box-shadow: var(--shadow-md);
     }
 
     .service-detail h3 {
       color: var(--ocean-deep);
       font-size: 1.75rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: var(--spacing-md);
     }
 
     .service-detail h4 {
       color: var(--ocean-blue);
       font-size: 1.25rem;
-      margin-top: 1.5rem;
+      margin-top: var(--spacing-md);
       margin-bottom: 0.75rem;
     }
 
@@ -274,31 +275,22 @@ import Layout from '../layouts/Layout.astro';
 
     .cta-section {
       background: var(--sand-warm);
-      padding: 3rem;
-      border-radius: 8px;
+      padding: var(--spacing-xl);
+      border-radius: var(--radius-md);
       text-align: center;
     }
 
     .cta-section h2 {
       color: var(--ocean-deep);
       font-size: 2rem;
-      margin-bottom: 1rem;
+      margin-bottom: var(--spacing-sm);
     }
 
     .cta-section p {
       color: var(--text-light);
       font-size: 1.1rem;
-      margin-bottom: 2rem;
+      margin-bottom: var(--spacing-lg);
       line-height: 1.7;
-    }
-
-    .btn {
-      padding: 1rem 2rem;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      display: inline-block;
     }
 
     .btn-primary {

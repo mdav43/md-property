@@ -1,0 +1,73 @@
+/* Global Styles - Foundational CSS */
+
+:root {
+  /* Sunshine Coast inspired luxury palette */
+  --ocean-deep: #0A2E4D;
+  --ocean-blue: #1A5F7A;
+  --ocean-light: #86BBD8;
+  --sand-warm: #F4E9D8;
+  --sand-light: #FAF7F2;
+  --gold-accent: #C9A96E;
+  --gold-light: #E8D5B7;
+  --white: #FFFFFF;
+  --text-dark: #2C2C2C;
+  --text-light: #666666;
+  
+  /* Typography */
+  --font-serif: 'Playfair Display', serif;
+  --font-sans: 'Inter', sans-serif;
+  
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+  --spacing-3xl: 6rem;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 20px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.15);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  
+  /* Borders */
+  --border-accent-width: 4px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: var(--sand-light);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
