@@ -143,18 +143,18 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <style>
-    /* Hero Section */
+    /* Page-specific styles for homepage */
     .hero {
       background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-blue) 100%);
       color: var(--white);
-      padding: 6rem 0 4rem;
+      padding: var(--spacing-3xl) 0 var(--spacing-2xl);
       margin-top: -1px;
     }
 
     .hero-content {
       display: flex;
       flex-direction: column;
-      gap: 3rem;
+      gap: var(--spacing-xl);
     }
 
     .hero-text {
@@ -163,69 +163,37 @@ import Layout from '../layouts/Layout.astro';
 
     .hero-title {
       font-size: 3.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: var(--spacing-md);
       line-height: 1.1;
     }
 
     .hero-title .accent {
       color: var(--gold-light);
       display: block;
-      margin-top: 0.5rem;
+      margin-top: var(--spacing-xs);
     }
 
     .hero-subtitle {
       font-size: 1.25rem;
       color: var(--sand-warm);
-      margin-bottom: 2rem;
+      margin-bottom: var(--spacing-lg);
       font-weight: 300;
     }
 
     .hero-buttons {
       display: flex;
-      gap: 1rem;
+      gap: var(--spacing-sm);
       justify-content: center;
       flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 1rem 2rem;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      display: inline-block;
-    }
-
-    .btn-primary {
-      background: var(--gold-accent);
-      color: var(--ocean-deep);
-    }
-
-    .btn-primary:hover {
-      background: var(--gold-light);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(201, 169, 110, 0.4);
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--white);
-      border: 2px solid var(--white);
-    }
-
-    .btn-secondary:hover {
-      background: var(--white);
-      color: var(--ocean-deep);
-      transform: translateY(-2px);
     }
 
     .hero-stats {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 2rem;
-      padding: 2rem;
+      gap: var(--spacing-lg);
+      padding: var(--spacing-lg);
       background: rgba(255, 255, 255, 0.1);
-      border-radius: 8px;
+      border-radius: var(--radius-md);
       backdrop-filter: blur(10px);
     }
 
@@ -243,205 +211,69 @@ import Layout from '../layouts/Layout.astro';
     .stat-label {
       font-size: 0.9rem;
       color: var(--sand-warm);
-      margin-top: 0.5rem;
+      margin-top: var(--spacing-xs);
     }
 
-    /* Services Section */
     .services {
-      padding: 6rem 0;
-    }
-
-    .section-title {
-      text-align: center;
-      font-size: 2.5rem;
-      color: var(--ocean-deep);
-      margin-bottom: 3rem;
+      padding: var(--spacing-3xl) 0;
     }
 
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+      gap: var(--spacing-lg);
     }
 
-    .service-card {
-      background: var(--white);
-      padding: 2.5rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
-    }
-
-    .service-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    }
-
-    .service-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .service-card h3 {
-      color: var(--ocean-deep);
-      margin-bottom: 1rem;
-      font-size: 1.5rem;
-    }
-
-    .service-card p {
-      color: var(--text-light);
-      margin-bottom: 1.5rem;
-      line-height: 1.7;
-    }
-
-    .service-link {
-      color: var(--ocean-blue);
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    .service-link:hover {
-      color: var(--gold-accent);
-    }
-
-    /* Why Sunshine Coast */
     .why-sunshine-coast {
-      padding: 6rem 0;
+      padding: var(--spacing-3xl) 0;
       background: var(--sand-warm);
     }
 
     .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
+      gap: var(--spacing-lg);
     }
 
-    .feature {
-      background: var(--white);
-      padding: 2rem;
-      border-radius: 8px;
-      border-left: 4px solid var(--gold-accent);
-    }
-
-    .feature h3 {
-      color: var(--ocean-deep);
-      margin-bottom: 0.75rem;
-      font-size: 1.25rem;
-    }
-
-    .feature p {
-      color: var(--text-light);
-      line-height: 1.6;
-    }
-
-    /* About Preview */
     .about-preview {
-      padding: 6rem 0;
+      padding: var(--spacing-3xl) 0;
     }
 
     .about-content {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4rem;
+      gap: var(--spacing-2xl);
       align-items: center;
     }
 
     .about-text h2 {
       color: var(--ocean-deep);
       font-size: 2.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: var(--spacing-md);
     }
 
     .about-text p {
       color: var(--text-light);
-      margin-bottom: 1rem;
+      margin-bottom: var(--spacing-sm);
       font-size: 1.1rem;
       line-height: 1.7;
     }
 
     .about-text .btn {
-      margin-top: 1rem;
+      margin-top: var(--spacing-sm);
     }
 
-    .image-placeholder {
-      aspect-ratio: 4/5;
-      background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--ocean-light) 100%);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--white);
-      font-size: 1.5rem;
-      font-family: var(--font-serif);
-    }
-
-    /* Blog Preview */
     .blog-preview {
-      padding: 6rem 0;
+      padding: var(--spacing-3xl) 0;
       background: var(--sand-light);
     }
 
     .blog-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+      gap: var(--spacing-lg);
     }
 
-    .blog-card {
-      background: var(--white);
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      transition: all 0.3s ease;
-    }
-
-    .blog-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-    }
-
-    .blog-image-placeholder {
-      height: 200px;
-      background: linear-gradient(135deg, var(--ocean-light) 0%, var(--sand-warm) 100%);
-    }
-
-    .blog-content {
-      padding: 1.5rem;
-    }
-
-    .blog-date {
-      color: var(--gold-accent);
-      font-size: 0.85rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .blog-card h3 {
-      color: var(--ocean-deep);
-      margin: 0.75rem 0;
-      font-size: 1.25rem;
-    }
-
-    .blog-card p {
-      color: var(--text-light);
-      margin-bottom: 1rem;
-      line-height: 1.6;
-    }
-
-    .blog-link {
-      color: var(--ocean-blue);
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s ease;
-    }
-
-    .blog-link:hover {
-      color: var(--gold-accent);
-    }
-
-    /* Responsive */
     @media (max-width: 768px) {
       .hero-title {
         font-size: 2.5rem;
@@ -453,10 +285,6 @@ import Layout from '../layouts/Layout.astro';
 
       .about-content {
         grid-template-columns: 1fr;
-      }
-
-      .section-title {
-        font-size: 2rem;
       }
 
       .services-grid,

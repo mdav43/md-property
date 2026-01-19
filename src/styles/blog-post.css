@@ -1,0 +1,138 @@
+/* Blog Post Styles - Shared across all blog posts */
+
+.blog-post {
+  padding: var(--spacing-2xl) 0;
+}
+
+.blog-post .container {
+  max-width: 800px;
+}
+
+.post-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.post-date {
+  color: var(--gold-accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.post-header h1 {
+  color: var(--ocean-deep);
+  font-size: 2.5rem;
+  margin: var(--spacing-sm) 0;
+  line-height: 1.2;
+}
+
+.post-meta {
+  color: var(--text-light);
+  font-size: 0.95rem;
+}
+
+.post-image-placeholder {
+  height: 400px;
+  background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--ocean-light) 100%);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.post-content {
+  color: var(--text-dark);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.post-content h2 {
+  color: var(--ocean-deep);
+  font-size: 1.75rem;
+  margin: 2.5rem 0 var(--spacing-sm);
+}
+
+.post-content h3 {
+  color: var(--ocean-blue);
+  font-size: 1.4rem;
+  margin: var(--spacing-lg) 0 var(--spacing-sm);
+}
+
+.post-content p {
+  margin-bottom: var(--spacing-md);
+  color: var(--text-light);
+}
+
+.post-content ul {
+  margin: var(--spacing-md) 0;
+  padding-left: var(--spacing-lg);
+}
+
+.post-content li {
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-light);
+}
+
+.post-content strong {
+  color: var(--ocean-deep);
+  font-weight: 600;
+}
+
+.post-cta {
+  background: var(--sand-warm);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-md);
+  text-align: center;
+  margin: var(--spacing-2xl) 0;
+  border-left: 4px solid var(--gold-accent);
+}
+
+.post-cta h3 {
+  color: var(--ocean-deep);
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.post-cta p {
+  color: var(--text-light);
+  margin-bottom: var(--spacing-lg);
+}
+
+.post-nav {
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--sand-warm);
+}
+
+.back-link {
+  color: var(--ocean-blue);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color var(--transition-base);
+}
+
+.back-link:hover {
+  color: var(--gold-accent);
+}
+
+@media (max-width: 768px) {
+  .post-header h1 {
+    font-size: 2rem;
+  }
+
+  .post-content {
+    font-size: 1rem;
+  }
+
+  .post-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .post-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .post-image-placeholder {
+    height: 250px;
+  }
+}
