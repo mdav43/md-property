@@ -142,7 +142,7 @@
   background: var(--white);
   padding: var(--spacing-lg);
   border-radius: var(--radius-md);
-  border-left: 4px solid var(--gold-accent);
+  border-left: var(--border-accent-width) solid var(--gold-accent);
 }
 
 .feature h3 {
