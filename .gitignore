@@ -17,3 +17,8 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+
+# Old backup directories
+src/pages.old/
+src/layouts.old/
+src/styles.old/
