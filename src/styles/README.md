@@ -1,91 +1,105 @@
 # CSS Architecture
 
-This project follows a modular CSS architecture for maintainability and performance.
+This project uses **Pico CSS** as the base CSS framework with custom overrides for branding.
 
 ## File Structure
 
 ```
 src/styles/
-├── global.css       # Global resets, CSS custom properties, base typography
-├── layout.css       # Navigation and footer components
-├── components.css   # Reusable UI components (buttons, cards, features)
-└── blog-post.css    # Shared blog post styles
+└── global.css       # Pico CSS overrides and custom theme
 ```
 
-## Design Principles
+## Design Approach
 
-### 1. **CSS Custom Properties (Variables)**
-All design tokens (colors, spacing, typography) are defined as CSS custom properties in `global.css`. This ensures:
-- Single source of truth for design values
-- Easy theme maintenance
-- Consistent spacing and colors across the site
+### 1. **Pico CSS Framework**
+The project uses [Pico CSS v2](https://picocss.com/) as the foundation:
+- Semantic HTML styling (minimal classes needed)
+- Built-in responsive design
+- Accessibility features
+- Classless components
 
-### 2. **Separation of Concerns**
-- **Global styles**: Base resets, typography, and layout containers
-- **Layout components**: Header and footer (used on every page)
-- **Reusable components**: Buttons, cards, and other UI elements shared across pages
-- **Page-specific styles**: Kept in each `.astro` file for unique page layouts
+### 2. **Custom Theme Overrides**
+`global.css` overrides Pico CSS defaults with the Sunshine Coast brand:
+- Custom color palette using Pico CSS variables
+- Typography settings (Playfair Display, Inter fonts)
+- Navigation and footer styling
+- Brand-specific design tokens
 
-### 3. **Component-Based Architecture**
-Each CSS file contains related styles:
-- Reduces duplication
-- Improves maintainability
-- Makes styles easy to locate and modify
+### 3. **Page-Specific Styles**
+Unique page layouts use scoped `<style>` tags in `.astro` files:
+- Hero sections
+- Image placeholders
+- Layout-specific adjustments
 
-### 4. **Performance Optimization**
-- CSS is bundled by Astro at build time
-- Only necessary styles are loaded
-- Shared styles are cached across pages
-- Minimal CSS duplication
+## Color Palette
 
-### 5. **Maintainability**
-- Semantic naming conventions
-- Consistent spacing using CSS variables
-- Logical grouping of related styles
-- Clear separation between global and page-specific styles
+The Sunshine Coast inspired luxury palette:
+- **Ocean Blues**: Deep ocean (#0A2E4D), Rich coastal (#1A5F7A), Light ocean (#86BBD8)
+- **Sandy Tones**: Warm beige (#F4E9D8), Light cream (#FAF7F2)
+- **Gold Accents**: Elegant gold (#C9A96E), Light gold (#E8D5B7)
 
 ## Usage
 
 ### Importing Styles
 
-In Layout.astro (global):
+In Layout.astro:
 ```astro
 ---
 import '../styles/global.css';
-import '../styles/layout.css';
-import '../styles/components.css';
 ---
+
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <!-- ... -->
+</head>
 ```
 
-In page-specific files:
-```astro
----
-import '../../styles/blog-post.css';
----
+### Using Pico CSS
+
+Pico CSS works with semantic HTML:
+
+```html
+<!-- Buttons -->
+<a href="#" role="button">Primary Button</a>
+<a href="#" role="button" class="secondary">Secondary Button</a>
+
+<!-- Grid Layout -->
+<div class="grid">
+  <div>Column 1</div>
+  <div>Column 2</div>
+  <div>Column 3</div>
+</div>
+
+<!-- Cards -->
+<article>
+  <header>Card Header</header>
+  <p>Card content...</p>
+  <footer>Card Footer</footer>
+</article>
+
+<!-- Container -->
+<div class="container">Centered content</div>
 ```
 
 ### CSS Variables
 
-Use CSS custom properties defined in `global.css`:
+Custom colors from `global.css`:
 
 ```css
 .my-element {
   color: var(--ocean-deep);
-  padding: var(--spacing-lg);
-  border-radius: var(--radius-md);
+  background: var(--sand-warm);
+  border-color: var(--gold-accent);
 }
 ```
 
-### Adding New Styles
-
-1. **Global styles**: Add to `global.css` if it affects the entire site
-2. **Reusable components**: Add to `components.css` if used across multiple pages
-3. **Page-specific**: Keep in the page's `<style>` section if unique to that page
-
 ## Benefits
 
-✅ **DRY (Don't Repeat Yourself)**: No duplicate CSS definitions
-✅ **Maintainable**: Easy to find and update styles
-✅ **Performant**: Efficient CSS delivery and caching
-✅ **Scalable**: Simple to add new pages and components
-✅ **Consistent**: Design tokens ensure visual consistency
+✅ **Minimal CSS**: Pico CSS provides most styling automatically
+✅ **Semantic HTML**: Improved accessibility and SEO
+✅ **Maintainable**: Few custom styles to manage
+✅ **Responsive**: Mobile-first design out of the box
+✅ **Consistent**: Framework ensures visual consistency
+✅ **Performance**: Lightweight CSS framework (~10KB gzipped)

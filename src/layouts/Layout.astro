@@ -1,7 +1,5 @@
 ---
 import '../styles/global.css';
-import '../styles/layout.css';
-import '../styles/components.css';
 
 interface Props {
   title: string;
@@ -12,61 +10,65 @@ const { title, description = "Jack McGhee Real Estate - Premium property service
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content={description}>
   <title>{title} | Jack McGhee Real Estate</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="/" class="logo">
-        <span class="logo-text">Jack McGhee</span>
-        <span class="logo-subtitle">Real Estate</span>
-      </a>
-      <ul class="nav-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About Jack</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="#contact" class="contact-btn">Contact</a></li>
-      </ul>
-    </div>
+  <nav class="container-fluid">
+    <ul>
+      <li>
+        <a href="/" class="logo">
+          <strong>Jack McGhee</strong>
+          <small>Real Estate</small>
+        </a>
+      </li>
+    </ul>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About Jack</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="#contact" role="button">Contact</a></li>
+    </ul>
   </nav>
 
   <main>
     <slot />
   </main>
 
-  <footer id="contact" class="footer">
-    <div class="container footer-content">
-      <div class="footer-section">
-        <h3>Jack McGhee Real Estate</h3>
-        <p>Premium property services on the Sunshine Coast</p>
+  <footer id="contact">
+    <div class="container-fluid">
+      <div class="grid">
+        <div>
+          <hgroup>
+            <h3>Jack McGhee Real Estate</h3>
+            <p>Premium property services on the Sunshine Coast</p>
+          </hgroup>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <p>📞 0400 123 456</p>
+          <p>📧 jackmcghee@propertypro.com.au</p>
+          <p>📍 Mooloolaba, Sunshine Coast QLD</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About Jack</a></li>
+            <li><a href="/blog">Blog</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="footer-section">
-        <h4>Contact</h4>
-        <p>📞 0400 123 456</p>
-        <p>📧 jackmcghee@propertypro.com.au</p>
-        <p>📍 Mooloolaba, Sunshine Coast QLD</p>
-      </div>
-      <div class="footer-section">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About Jack</a></li>
-          <li><a href="/blog">Blog</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="container">
-        <p>&copy; {new Date().getFullYear()} Jack McGhee Real Estate. All rights reserved.</p>
-      </div>
+      <hr>
+      <p style="text-align: center;"><small>&copy; {new Date().getFullYear()} Jack McGhee Real Estate. All rights reserved.</small></p>
     </div>
   </footer>
 </body>

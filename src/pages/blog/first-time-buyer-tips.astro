@@ -1,20 +1,19 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import '../../styles/blog-post.css';
 ---
 
 <Layout title="5 Essential Tips for First-Time Home Buyers" description="Expert advice for first-time buyers navigating the Sunshine Coast property market">
-  <article class="blog-post">
+  <article>
     <div class="container">
-      <header class="post-header">
-        <span class="post-date">November 2025</span>
+      <header style="text-align: center; margin-bottom: 2rem;">
+        <p><small>November 2025</small></p>
         <h1>5 Essential Tips for First-Time Home Buyers</h1>
-        <p class="post-meta">By Jack McGhee | 4 min read</p>
+        <p><small>By Jack McGhee | 4 min read</small></p>
       </header>
 
       <div class="post-image-placeholder"></div>
 
-      <div class="post-content">
+      <div>
         <p>
           Buying your first home is one of life's most significant financial decisions. It's exciting, 
           sometimes overwhelming, but ultimately incredibly rewarding. Having guided hundreds of 
@@ -154,16 +153,29 @@ import '../../styles/blog-post.css';
           and guidance, you'll look back on this time fondly as the beginning of your property journey.
         </p>
 
-        <div class="post-cta">
+        <article style="background: var(--sand-warm); padding: 2rem; border-radius: 0.5rem; text-align: center; margin: 2rem 0; border-left: 4px solid var(--gold-accent);">
           <h3>Ready to Start Your First Home Journey?</h3>
           <p>Let's discuss your goals and create a personalized plan for finding your perfect property.</p>
-          <a href="#contact" class="btn btn-primary">Schedule a Consultation</a>
-        </div>
+          <a href="#contact" role="button">Schedule a Consultation</a>
+        </article>
       </div>
 
-      <nav class="post-nav">
-        <a href="/blog" class="back-link">← Back to Blog</a>
+      <nav style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--sand-warm);">
+        <a href="/blog">← Back to Blog</a>
       </nav>
     </div>
   </article>
+
+  <style>
+    .container {
+      max-width: 800px;
+    }
+
+    .post-image-placeholder {
+      height: 400px;
+      background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--ocean-light) 100%);
+      border-radius: 0.5rem;
+      margin-bottom: 2rem;
+    }
+  </style>
 </Layout>

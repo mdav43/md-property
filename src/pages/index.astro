@@ -5,61 +5,67 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="Home">
   <!-- Hero Section -->
   <section class="hero">
-    <div class="container hero-content">
-      <div class="hero-text">
-        <h1 class="hero-title">
+    <div class="container">
+      <hgroup>
+        <h1>
           Think You Know Property?<br/>
           <span class="accent">You Don't Know Jack.</span>
         </h1>
-        <p class="hero-subtitle">
+        <p>
           Premium real estate services on the Sunshine Coast.<br/>
           Delivering exceptional results with 20+ years of expertise.
         </p>
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Get Started</a>
-          <a href="/about" class="btn btn-secondary">Learn More</a>
-        </div>
+      </hgroup>
+      <div class="hero-buttons">
+        <a href="#contact" role="button">Get Started</a>
+        <a href="/about" role="button" class="secondary">Learn More</a>
       </div>
-      <div class="hero-stats">
-        <div class="stat">
-          <div class="stat-number">20+</div>
-          <div class="stat-label">Years Experience</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">500+</div>
-          <div class="stat-label">Properties Sold</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number">#1</div>
-          <div class="stat-label">Client Satisfaction</div>
-        </div>
+      <div class="grid hero-stats">
+        <article>
+          <hgroup>
+            <h2>20+</h2>
+            <p>Years Experience</p>
+          </hgroup>
+        </article>
+        <article>
+          <hgroup>
+            <h2>500+</h2>
+            <p>Properties Sold</p>
+          </hgroup>
+        </article>
+        <article>
+          <hgroup>
+            <h2>#1</h2>
+            <p>Client Satisfaction</p>
+          </hgroup>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section class="services">
+  <section>
     <div class="container">
-      <h2 class="section-title">How I Can Help</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">🏡</div>
+      <h2 style="text-align: center;">How I Can Help</h2>
+      <div class="grid">
+        <article>
+          <header><span style="font-size: 3rem;">🏡</span></header>
           <h3>Selling Your Property</h3>
           <p>Maximize your property's value with strategic marketing, emotional storytelling, and expert negotiation skills honed in Sydney's competitive markets.</p>
-          <a href="#contact" class="service-link">Get Your Free Appraisal →</a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">🔍</div>
+          <footer><a href="#contact">Get Your Free Appraisal →</a></footer>
+        </article>
+        <article>
+          <header><span style="font-size: 3rem;">🔍</span></header>
           <h3>Buyer's Advocate</h3>
           <p>Your trusted partner in finding the perfect Sunshine Coast property. Benefit from deep market insights and hyperlocal knowledge to buy with confidence.</p>
-          <a href="#contact" class="service-link">Start Your Search →</a>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">💼</div>
+          <footer><a href="#contact">Start Your Search →</a></footer>
+        </article>
+        <article>
+          <header><span style="font-size: 3rem;">💼</span></header>
           <h3>Market Insights</h3>
           <p>Data-driven property analysis and strategic guidance to help you make informed decisions in one of Australia's fastest-growing regions.</p>
-          <a href="/blog" class="service-link">Read Latest Insights →</a>
-        </div>
+          <footer><a href="/blog">Read Latest Insights →</a></footer>
+        </article>
       </div>
     </div>
   </section>
@@ -67,22 +73,22 @@ import Layout from '../layouts/Layout.astro';
   <!-- Why Sunshine Coast Section -->
   <section class="why-sunshine-coast">
     <div class="container">
-      <h2 class="section-title">Why the Sunshine Coast?</h2>
-      <div class="features-grid">
-        <div class="feature">
-          <h3>🌊 Lifestyle</h3>
+      <h2 style="text-align: center;">Why the Sunshine Coast?</h2>
+      <div class="grid">
+        <div>
+          <h4>🌊 Lifestyle</h4>
           <p>Beautiful beaches, vibrant communities, and a stress-free pace of life that attracts families from across Australia.</p>
         </div>
-        <div class="feature">
-          <h3>📈 Growth Potential</h3>
+        <div>
+          <h4>📈 Growth Potential</h4>
           <p>With incoming investments and infrastructure projects, the Sunshine Coast is a hotbed for sustainable property growth.</p>
         </div>
-        <div class="feature">
-          <h3>👨‍👩‍👧‍👦 Family-Friendly</h3>
+        <div>
+          <h4>👨‍👩‍👧‍👦 Family-Friendly</h4>
           <p>Top-rated schools, parks, and community-focused living make this the perfect place to raise a family.</p>
         </div>
-        <div class="feature">
-          <h3>🏖️ Beachside Living</h3>
+        <div>
+          <h4>🏖️ Beachside Living</h4>
           <p>From Mooloolaba's relaxed charm to Maroochydore's dynamic community, find your perfect coastal lifestyle.</p>
         </div>
       </div>
@@ -90,23 +96,25 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <!-- About Preview Section -->
-  <section class="about-preview">
-    <div class="container about-content">
-      <div class="about-text">
-        <h2>About Jack McGhee</h2>
-        <p>
-          I'm Jack McGhee, a senior real estate professional with over 20 years of experience 
-          delivering premium results in Australia's most competitive property markets.
-        </p>
-        <p>
-          After relocating to the Sunshine Coast with my young family, I'm now proud to call 
-          Mooloolaba home and bring metropolitan expertise to a community I've long admired.
-        </p>
-        <a href="/about" class="btn btn-primary">Read My Story</a>
-      </div>
-      <div class="about-image">
-        <div class="image-placeholder">
-          <span>Jack McGhee</span>
+  <section>
+    <div class="container">
+      <div class="grid">
+        <div>
+          <h2>About Jack McGhee</h2>
+          <p>
+            I'm Jack McGhee, a senior real estate professional with over 20 years of experience 
+            delivering premium results in Australia's most competitive property markets.
+          </p>
+          <p>
+            After relocating to the Sunshine Coast with my young family, I'm now proud to call 
+            Mooloolaba home and bring metropolitan expertise to a community I've long admired.
+          </p>
+          <a href="/about" role="button">Read My Story</a>
+        </div>
+        <div>
+          <figure class="image-placeholder">
+            <span>Jack McGhee</span>
+          </figure>
         </div>
       </div>
     </div>
@@ -115,29 +123,25 @@ import Layout from '../layouts/Layout.astro';
   <!-- Recent Blog Posts -->
   <section class="blog-preview">
     <div class="container">
-      <h2 class="section-title">Latest Insights</h2>
-      <div class="blog-grid">
-        <article class="blog-card">
-          <div class="blog-image-placeholder"></div>
-          <div class="blog-content">
-            <span class="blog-date">December 2025</span>
-            <h3>The Sunshine Coast Property Market: 2026 Outlook</h3>
-            <p>Discover the trends shaping the Sunshine Coast real estate market and what they mean for buyers and sellers...</p>
-            <a href="/blog/sunshine-coast-market-outlook-2026" class="blog-link">Read More →</a>
-          </div>
+      <h2 style="text-align: center;">Latest Insights</h2>
+      <div class="grid">
+        <article>
+          <header class="blog-image-placeholder"></header>
+          <small>December 2025</small>
+          <h3>The Sunshine Coast Property Market: 2026 Outlook</h3>
+          <p>Discover the trends shaping the Sunshine Coast real estate market and what they mean for buyers and sellers...</p>
+          <footer><a href="/blog/sunshine-coast-market-outlook-2026">Read More →</a></footer>
         </article>
-        <article class="blog-card">
-          <div class="blog-image-placeholder"></div>
-          <div class="blog-content">
-            <span class="blog-date">November 2025</span>
-            <h3>5 Tips for First-Time Home Buyers</h3>
-            <p>Navigating your first property purchase can be overwhelming. Here's my expert advice to make it seamless...</p>
-            <a href="/blog/first-time-buyer-tips" class="blog-link">Read More →</a>
-          </div>
+        <article>
+          <header class="blog-image-placeholder"></header>
+          <small>November 2025</small>
+          <h3>5 Tips for First-Time Home Buyers</h3>
+          <p>Navigating your first property purchase can be overwhelming. Here's my expert advice to make it seamless...</p>
+          <footer><a href="/blog/first-time-buyer-tips">Read More →</a></footer>
         </article>
       </div>
       <div style="text-align: center; margin-top: 2rem;">
-        <a href="/blog" class="btn btn-secondary">View All Articles</a>
+        <a href="/blog" role="button" class="secondary">View All Articles</a>
       </div>
     </div>
   </section>
@@ -147,150 +151,98 @@ import Layout from '../layouts/Layout.astro';
     .hero {
       background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-blue) 100%);
       color: var(--white);
-      padding: var(--spacing-3xl) 0 var(--spacing-2xl);
+      padding: 6rem 0 4rem;
       margin-top: -1px;
     }
 
-    .hero-content {
-      display: flex;
-      flex-direction: column;
-      gap: var(--spacing-xl);
-    }
-
-    .hero-text {
+    .hero h1 {
+      font-size: 3.5rem;
+      color: var(--white);
+      margin-bottom: 1rem;
+      line-height: 1.1;
       text-align: center;
     }
 
-    .hero-title {
-      font-size: 3.5rem;
-      margin-bottom: var(--spacing-md);
-      line-height: 1.1;
-    }
-
-    .hero-title .accent {
+    .hero .accent {
       color: var(--gold-light);
       display: block;
-      margin-top: var(--spacing-xs);
+      margin-top: 0.5rem;
     }
 
-    .hero-subtitle {
+    .hero p {
       font-size: 1.25rem;
       color: var(--sand-warm);
-      margin-bottom: var(--spacing-lg);
+      margin-bottom: 2rem;
       font-weight: 300;
+      text-align: center;
     }
 
     .hero-buttons {
       display: flex;
-      gap: var(--spacing-sm);
+      gap: 1rem;
       justify-content: center;
       flex-wrap: wrap;
+      margin-bottom: 3rem;
     }
 
     .hero-stats {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: var(--spacing-lg);
-      padding: var(--spacing-lg);
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: var(--radius-md);
-      backdrop-filter: blur(10px);
+      margin-top: 2rem;
     }
 
-    .stat {
+    .hero-stats article {
       text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      margin: 0;
     }
 
-    .stat-number {
+    .hero-stats h2 {
       font-size: 2.5rem;
       font-weight: 700;
       color: var(--gold-light);
-      font-family: var(--font-serif);
+      margin-bottom: 0.5rem;
     }
 
-    .stat-label {
+    .hero-stats p {
       font-size: 0.9rem;
       color: var(--sand-warm);
-      margin-top: var(--spacing-xs);
-    }
-
-    .services {
-      padding: var(--spacing-3xl) 0;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: var(--spacing-lg);
+      margin: 0;
     }
 
     .why-sunshine-coast {
-      padding: var(--spacing-3xl) 0;
       background: var(--sand-warm);
     }
 
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: var(--spacing-lg);
-    }
-
-    .about-preview {
-      padding: var(--spacing-3xl) 0;
-    }
-
-    .about-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: var(--spacing-2xl);
+    .image-placeholder {
+      aspect-ratio: 4/5;
+      background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--ocean-light) 100%);
+      border-radius: 0.5rem;
+      display: flex;
       align-items: center;
+      justify-content: center;
+      color: var(--white);
+      font-size: 1.5rem;
+      font-family: var(--font-serif);
+      margin: 0;
     }
 
-    .about-text h2 {
-      color: var(--ocean-deep);
-      font-size: 2.5rem;
-      margin-bottom: var(--spacing-md);
-    }
-
-    .about-text p {
-      color: var(--text-light);
-      margin-bottom: var(--spacing-sm);
-      font-size: 1.1rem;
-      line-height: 1.7;
-    }
-
-    .about-text .btn {
-      margin-top: var(--spacing-sm);
+    .blog-image-placeholder {
+      height: 200px;
+      background: linear-gradient(135deg, var(--ocean-light) 0%, var(--sand-warm) 100%);
+      border-radius: 0.5rem;
     }
 
     .blog-preview {
-      padding: var(--spacing-3xl) 0;
       background: var(--sand-light);
     }
 
-    .blog-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: var(--spacing-lg);
-    }
-
     @media (max-width: 768px) {
-      .hero-title {
+      .hero h1 {
         font-size: 2.5rem;
       }
 
-      .hero-subtitle {
+      .hero p {
         font-size: 1.1rem;
-      }
-
-      .about-content {
-        grid-template-columns: 1fr;
-      }
-
-      .services-grid,
-      .features-grid,
-      .blog-grid {
-        grid-template-columns: 1fr;
       }
     }
   </style>

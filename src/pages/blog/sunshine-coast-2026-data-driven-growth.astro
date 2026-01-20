@@ -1,20 +1,19 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import '../../styles/blog-post.css';
 ---
 
 <Layout title="The Sunshine Coast 2026: Data-Driven Growth for Property Investors" description="Current data from ABS and Sunshine Coast Council confirms the region is outperforming national growth averages">
-  <article class="blog-post">
+  <article>
     <div class="container">
-      <header class="post-header">
-        <span class="post-date">January 2026</span>
+      <header style="text-align: center; margin-bottom: 2rem;">
+        <p><small>January 2026</small></p>
         <h1>The Sunshine Coast 2026: Data-Driven Growth for Property Investors</h1>
-        <p class="post-meta">By Jack McGhee | 5 min read</p>
+        <p><small>By Jack McGhee | 5 min read</small></p>
       </header>
 
       <div class="post-image-placeholder"></div>
 
-      <div class="post-content">
+      <div>
         <p>
           The Sunshine Coast is no longer just a lifestyle choice—it is an economic powerhouse. 
           Current data from the Australian Bureau of Statistics (ABS) and Sunshine Coast Council 
@@ -71,16 +70,29 @@ import '../../styles/blog-post.css';
           opportunity and lifestyle.
         </p>
 
-        <div class="post-cta">
+        <article style="background: var(--sand-warm); padding: 2rem; border-radius: 0.5rem; text-align: center; margin: 2rem 0; border-left: 4px solid var(--gold-accent);">
           <h3>Want a deep dive into the ABS data for your specific suburb?</h3>
           <p>Contact us today for a localized market report and see how your property stacks up in 2026.</p>
-          <a href="#contact" class="btn btn-primary">Contact Us Today</a>
-        </div>
+          <a href="#contact" role="button">Contact Us Today</a>
+        </article>
       </div>
 
-      <nav class="post-nav">
-        <a href="/blog" class="back-link">← Back to Blog</a>
+      <nav style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--sand-warm);">
+        <a href="/blog">← Back to Blog</a>
       </nav>
     </div>
   </article>
 </Layout>
+
+<style>
+  .container {
+    max-width: 800px;
+  }
+
+  .post-image-placeholder {
+    height: 400px;
+    background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--ocean-light) 100%);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+  }
+</style>

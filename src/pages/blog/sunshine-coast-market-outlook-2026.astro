@@ -1,20 +1,19 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import '../../styles/blog-post.css';
 ---
 
 <Layout title="The Sunshine Coast Property Market: 2026 Outlook" description="Discover the key trends shaping the Sunshine Coast real estate market in 2026">
-  <article class="blog-post">
+  <article>
     <div class="container">
-      <header class="post-header">
-        <span class="post-date">December 2025</span>
+      <header style="text-align: center; margin-bottom: 2rem;">
+        <p><small>December 2025</small></p>
         <h1>The Sunshine Coast Property Market: 2026 Outlook</h1>
-        <p class="post-meta">By Jack McGhee | 5 min read</p>
+        <p><small>By Jack McGhee | 5 min read</small></p>
       </header>
 
       <div class="post-image-placeholder"></div>
 
-      <div class="post-content">
+      <div>
         <p>
           As we enter 2026, the Sunshine Coast continues to establish itself as one of Australia's 
           most dynamic and sought-after property markets. The combination of lifestyle appeal, 
@@ -118,16 +117,29 @@ import '../../styles/blog-post.css';
           those who approach the market strategically.
         </p>
 
-        <div class="post-cta">
+        <article style="background: var(--sand-warm); padding: 2rem; border-radius: 0.5rem; text-align: center; margin: 2rem 0; border-left: 4px solid var(--gold-accent);">
           <h3>Want to discuss your property goals for 2026?</h3>
           <p>Let's have a conversation about how these trends apply to your specific situation.</p>
-          <a href="#contact" class="btn btn-primary">Get in Touch</a>
-        </div>
+          <a href="#contact" role="button">Get in Touch</a>
+        </article>
       </div>
 
-      <nav class="post-nav">
-        <a href="/blog" class="back-link">← Back to Blog</a>
+      <nav style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--sand-warm);">
+        <a href="/blog">← Back to Blog</a>
       </nav>
     </div>
   </article>
 </Layout>
+
+<style>
+  .container {
+    max-width: 800px;
+  }
+
+  .post-image-placeholder {
+    height: 400px;
+    background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--ocean-light) 100%);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+  }
+</style>

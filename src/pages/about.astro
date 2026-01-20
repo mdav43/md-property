@@ -5,20 +5,22 @@ import Layout from '../layouts/Layout.astro';
 <Layout title="About Jack" description="Learn about Jack McGhee's journey from Sydney's competitive markets to the Sunshine Coast">
   <section class="about-hero">
     <div class="container">
-      <h1>About Jack McGhee</h1>
-      <p class="tagline">"Think you know property? You don't know Jack."</p>
+      <hgroup>
+        <h1>About Jack McGhee</h1>
+        <p>"Think you know property? You don't know Jack."</p>
+      </hgroup>
     </div>
   </section>
 
-  <section class="about-content">
-    <div class="container content-wrapper">
-      <div class="profile-section">
-        <div class="profile-image">
-          <div class="image-placeholder">
+  <section>
+    <div class="container">
+      <div class="grid">
+        <div>
+          <figure class="image-placeholder">
             <span>Jack McGhee</span>
-          </div>
+          </figure>
         </div>
-        <div class="profile-text">
+        <div>
           <h2>A Journey of Excellence</h2>
           <p>
             I'm Jack McGhee, a senior real estate professional with over 20 years of experience 
@@ -35,105 +37,99 @@ import Layout from '../layouts/Layout.astro';
         </div>
       </div>
 
-      <div class="journey-section">
-        <h2>From Sydney to the Sunshine Coast</h2>
-        <p>
-          After relocating to the Sunshine Coast with my young family, I'm now proud to call 
-          Mooloolaba home and bring metropolitan expertise to a community I've long admired. My focus 
-          is simple: reduce uncertainty, protect your property's value, and deliver results that 
-          exceed expectations.
-        </p>
-        <p>
-          12 months ago, I settled in Mooloolaba, turning my frequent visits to the Sunshine Coast 
-          over the past 15 years into a permanent lifestyle. With strong family ties in Buderim and 
-          Mooloolaba, I bring a personal passion for the area alongside my professional expertise 
-          honed in Sydney's competitive eastern suburbs.
-        </p>
-        <p>
-          The Sunshine Coast isn't just where I work—it's the place I call home. Let me help you make 
-          this stunning region your home too.
-        </p>
+      <h2>From Sydney to the Sunshine Coast</h2>
+      <p>
+        After relocating to the Sunshine Coast with my young family, I'm now proud to call 
+        Mooloolaba home and bring metropolitan expertise to a community I've long admired. My focus 
+        is simple: reduce uncertainty, protect your property's value, and deliver results that 
+        exceed expectations.
+      </p>
+      <p>
+        12 months ago, I settled in Mooloolaba, turning my frequent visits to the Sunshine Coast 
+        over the past 15 years into a permanent lifestyle. With strong family ties in Buderim and 
+        Mooloolaba, I bring a personal passion for the area alongside my professional expertise 
+        honed in Sydney's competitive eastern suburbs.
+      </p>
+      <p>
+        The Sunshine Coast isn't just where I work—it's the place I call home. Let me help you make 
+        this stunning region your home too.
+      </p>
+
+      <h2>My Approach</h2>
+      <div class="grid">
+        <article class="approach-card">
+          <h4>🎯 Understanding Buyer Behaviour</h4>
+          <p>
+            Success in real estate comes from understanding how people make decisions. I focus on 
+            what creates urgency and how to position a property to maximise its perceived value.
+          </p>
+        </article>
+        <article class="approach-card">
+          <h4>💬 Clear Communication</h4>
+          <p>
+            I believe in keeping my clients informed every step of the way. My calm, down-to-earth 
+            style ensures you stay confident and in control throughout the process.
+          </p>
+        </article>
+        <article class="approach-card">
+          <h4>📊 Deep Market Knowledge</h4>
+          <p>
+            With 20+ years spanning Sydney's competitive markets and now the Sunshine Coast, I bring 
+            data-driven insights that protect your property's value.
+          </p>
+        </article>
+        <article class="approach-card">
+          <h4>🤝 Disciplined Strategy</h4>
+          <p>
+            Combining strategic marketing with decisive negotiation, I've consistently achieved 
+            record prices by reducing uncertainty and delivering exceptional results.
+          </p>
+        </article>
       </div>
 
-      <div class="approach-section">
-        <h2>My Approach</h2>
-        <div class="approach-grid">
-          <div class="approach-card">
-            <h3>🎯 Understanding Buyer Behaviour</h3>
-            <p>
-              Success in real estate comes from understanding how people make decisions. I focus on 
-              what creates urgency and how to position a property to maximise its perceived value.
-            </p>
-          </div>
-          <div class="approach-card">
-            <h3>💬 Clear Communication</h3>
-            <p>
-              I believe in keeping my clients informed every step of the way. My calm, down-to-earth 
-              style ensures you stay confident and in control throughout the process.
-            </p>
-          </div>
-          <div class="approach-card">
-            <h3>📊 Deep Market Knowledge</h3>
-            <p>
-              With 20+ years spanning Sydney's competitive markets and now the Sunshine Coast, I bring 
-              data-driven insights that protect your property's value.
-            </p>
-          </div>
-          <div class="approach-card">
-            <h3>🤝 Disciplined Strategy</h3>
-            <p>
-              Combining strategic marketing with decisive negotiation, I've consistently achieved 
-              record prices by reducing uncertainty and delivering exceptional results.
-            </p>
-          </div>
-        </div>
-      </div>
+      <h2>How I Can Help You</h2>
+      
+      <article>
+        <h3>Selling Your Property</h3>
+        <h5>The Power of Emotional Connection</h5>
+        <p>
+          Australians are motivated by the lifestyle a property offers. My marketing strategies tap 
+          into these motivations using tailored storytelling, evocative imagery, and immersive 
+          campaigns that make buyers see themselves living in your home.
+        </p>
+        <h5>Proven Negotiation Expertise</h5>
+        <p>
+          Maximizing value requires deep market knowledge and strategic insight. I use data-driven 
+          approaches to position your property competitively while my negotiation skills ensure you 
+          secure the best possible price.
+        </p>
+      </article>
 
-      <div class="services-section">
-        <h2>How I Can Help You</h2>
-        
-        <div class="service-detail">
-          <h3>Selling Your Property</h3>
-          <h4>The Power of Emotional Connection</h4>
-          <p>
-            Australians are motivated by the lifestyle a property offers. My marketing strategies tap 
-            into these motivations using tailored storytelling, evocative imagery, and immersive 
-            campaigns that make buyers see themselves living in your home.
-          </p>
-          <h4>Proven Negotiation Expertise</h4>
-          <p>
-            Maximizing value requires deep market knowledge and strategic insight. I use data-driven 
-            approaches to position your property competitively while my negotiation skills ensure you 
-            secure the best possible price.
-          </p>
-        </div>
+      <article>
+        <h3>Thinking of Buying?</h3>
+        <h5>Your Advocate, Every Step of the Way</h5>
+        <p>
+          Moving to the Sunshine Coast is a life-changing decision, and I'm here to smooth the 
+          process. Whether you're relocating from across Australia or looking for an upgrade locally, 
+          I understand what matters most—location, lifestyle, and long-term value.
+        </p>
+        <h5>Market Insights You Can Trust</h5>
+        <p>
+          I combine hyperlocal knowledge with property-specific insights, ensuring you buy with 
+          confidence in one of the fastest-growing regions in the country. From Mooloolaba's relaxed 
+          beachside charm to Maroochydore's dynamic community feel, I have you covered.
+        </p>
+      </article>
 
-        <div class="service-detail">
-          <h3>Thinking of Buying?</h3>
-          <h4>Your Advocate, Every Step of the Way</h4>
-          <p>
-            Moving to the Sunshine Coast is a life-changing decision, and I'm here to smooth the 
-            process. Whether you're relocating from across Australia or looking for an upgrade locally, 
-            I understand what matters most—location, lifestyle, and long-term value.
-          </p>
-          <h4>Market Insights You Can Trust</h4>
-          <p>
-            I combine hyperlocal knowledge with property-specific insights, ensuring you buy with 
-            confidence in one of the fastest-growing regions in the country. From Mooloolaba's relaxed 
-            beachside charm to Maroochydore's dynamic community feel, I have you covered.
-          </p>
-        </div>
-      </div>
-
-      <div class="cta-section">
+      <article class="cta-section">
         <h2>Ready to Get Started?</h2>
         <p>
           Whether you're buying, selling, or seeking honest market guidance, my goal is to provide 
           a structured, transparent, and highly personalised real estate experience—making your next 
           move both rewarding and seamless.
         </p>
-        <a href="#contact" class="btn btn-primary">Contact Jack Today</a>
-      </div>
+        <a href="#contact" role="button">Contact Jack Today</a>
+      </article>
     </div>
   </section>
 
@@ -142,166 +138,46 @@ import Layout from '../layouts/Layout.astro';
     .about-hero {
       background: linear-gradient(135deg, var(--ocean-deep) 0%, var(--ocean-blue) 100%);
       color: var(--white);
-      padding: var(--spacing-2xl) 0;
+      padding: 4rem 0;
       text-align: center;
       margin-top: -1px;
     }
 
     .about-hero h1 {
       font-size: 3rem;
-      margin-bottom: var(--spacing-sm);
+      color: var(--white);
     }
 
-    .tagline {
+    .about-hero p {
       font-size: 1.5rem;
       color: var(--gold-light);
       font-family: var(--font-serif);
       font-style: italic;
     }
 
-    .about-content {
-      padding: var(--spacing-2xl) 0;
-    }
-
-    .content-wrapper {
-      max-width: 900px;
-    }
-
-    .profile-section {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: var(--spacing-xl);
-      margin-bottom: var(--spacing-2xl);
-      align-items: start;
-    }
-
-    .profile-image .image-placeholder {
+    .image-placeholder {
       aspect-ratio: 3/4;
       background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--ocean-light) 100%);
-      border-radius: var(--radius-md);
+      border-radius: 0.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--white);
       font-size: 1.5rem;
       font-family: var(--font-serif);
-    }
-
-    .profile-text h2 {
-      color: var(--ocean-deep);
-      font-size: 2rem;
-      margin-bottom: var(--spacing-md);
-    }
-
-    .profile-text p {
-      color: var(--text-light);
-      margin-bottom: var(--spacing-md);
-      font-size: 1.05rem;
-      line-height: 1.8;
-    }
-
-    .journey-section,
-    .approach-section,
-    .services-section {
-      margin-bottom: var(--spacing-2xl);
-    }
-
-    .journey-section h2,
-    .approach-section h2,
-    .services-section h2 {
-      color: var(--ocean-deep);
-      font-size: 2rem;
-      margin-bottom: var(--spacing-md);
-    }
-
-    .journey-section p,
-    .services-section p {
-      color: var(--text-light);
-      margin-bottom: var(--spacing-md);
-      font-size: 1.05rem;
-      line-height: 1.8;
-    }
-
-    .approach-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: var(--spacing-lg);
-      margin-top: var(--spacing-lg);
+      margin: 0;
     }
 
     .approach-card {
       background: var(--sand-warm);
-      padding: var(--spacing-lg);
-      border-radius: var(--radius-md);
       border-left: 4px solid var(--gold-accent);
-    }
-
-    .approach-card h3 {
-      color: var(--ocean-deep);
-      font-size: 1.15rem;
-      margin-bottom: var(--spacing-sm);
-    }
-
-    .approach-card p {
-      color: var(--text-light);
-      line-height: 1.7;
-      font-size: 0.95rem;
-    }
-
-    .service-detail {
-      background: var(--white);
-      padding: var(--spacing-lg);
-      border-radius: var(--radius-md);
-      margin-bottom: var(--spacing-lg);
-      box-shadow: var(--shadow-md);
-    }
-
-    .service-detail h3 {
-      color: var(--ocean-deep);
-      font-size: 1.75rem;
-      margin-bottom: var(--spacing-md);
-    }
-
-    .service-detail h4 {
-      color: var(--ocean-blue);
-      font-size: 1.25rem;
-      margin-top: var(--spacing-md);
-      margin-bottom: 0.75rem;
-    }
-
-    .service-detail h3:first-child {
-      margin-top: 0;
+      margin: 0;
     }
 
     .cta-section {
       background: var(--sand-warm);
-      padding: var(--spacing-xl);
-      border-radius: var(--radius-md);
       text-align: center;
-    }
-
-    .cta-section h2 {
-      color: var(--ocean-deep);
-      font-size: 2rem;
-      margin-bottom: var(--spacing-sm);
-    }
-
-    .cta-section p {
-      color: var(--text-light);
-      font-size: 1.1rem;
-      margin-bottom: var(--spacing-lg);
-      line-height: 1.7;
-    }
-
-    .btn-primary {
-      background: var(--ocean-blue);
-      color: var(--white);
-    }
-
-    .btn-primary:hover {
-      background: var(--ocean-deep);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(10, 46, 77, 0.3);
+      margin-top: 2rem;
     }
 
     @media (max-width: 768px) {
@@ -309,16 +185,8 @@ import Layout from '../layouts/Layout.astro';
         font-size: 2rem;
       }
 
-      .tagline {
+      .about-hero p {
         font-size: 1.2rem;
-      }
-
-      .profile-section {
-        grid-template-columns: 1fr;
-      }
-
-      .approach-grid {
-        grid-template-columns: 1fr;
       }
     }
   </style>

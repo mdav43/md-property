@@ -68,7 +68,7 @@ npm run preview
 ## 🛠️ Technology Stack
 
 - **Framework**: Astro 5.16.11
-- **Styling**: CSS with custom properties
+- **Styling**: Pico CSS v2 (minimal, semantic CSS framework)
 - **Content**: MDX support
 - **Fonts**: Google Fonts (Playfair Display, Inter)
 

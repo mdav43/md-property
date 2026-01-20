@@ -1,20 +1,19 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import '../../styles/blog-post.css';
 ---
 
 <Layout title="Selling Your Property on the Sunshine Coast: A Strategic Guide" description="Learn proven strategies for maximizing property value in the Sunshine Coast market">
-  <article class="blog-post">
+  <article>
     <div class="container">
-      <header class="post-header">
-        <span class="post-date">October 2025</span>
+      <header style="text-align: center; margin-bottom: 2rem;">
+        <p><small>October 2025</small></p>
         <h1>Selling Your Property on the Sunshine Coast: A Strategic Guide</h1>
-        <p class="post-meta">By Jack McGhee | 6 min read</p>
+        <p><small>By Jack McGhee | 6 min read</small></p>
       </header>
 
       <div class="post-image-placeholder"></div>
 
-      <div class="post-content">
+      <div>
         <p>
           Selling a property on the Sunshine Coast requires more than just listing it and waiting 
           for offers. The market has evolved, and buyers are more discerning than ever. Success 
@@ -202,16 +201,29 @@ import '../../styles/blog-post.css';
           difference.
         </p>
 
-        <div class="post-cta">
+        <article style="background: var(--sand-warm); padding: 2rem; border-radius: 0.5rem; text-align: center; margin: 2rem 0; border-left: 4px solid var(--gold-accent);">
           <h3>Ready to Sell Your Property?</h3>
           <p>Let's discuss how to position your property for maximum value in today's market.</p>
-          <a href="#contact" class="btn btn-primary">Get Your Free Appraisal</a>
-        </div>
+          <a href="#contact" role="button">Get Your Free Appraisal</a>
+        </article>
       </div>
 
-      <nav class="post-nav">
-        <a href="/blog" class="back-link">← Back to Blog</a>
+      <nav style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--sand-warm);">
+        <a href="/blog">← Back to Blog</a>
       </nav>
     </div>
   </article>
 </Layout>
+
+<style>
+  .container {
+    max-width: 800px;
+  }
+
+  .post-image-placeholder {
+    height: 400px;
+    background: linear-gradient(135deg, var(--ocean-blue) 0%, var(--ocean-light) 100%);
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+  }
+</style>

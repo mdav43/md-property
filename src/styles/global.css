@@ -1,7 +1,14 @@
-/* Global Styles - Foundational CSS */
+/* Custom styles to override Pico CSS with Sunshine Coast theme */
 
 :root {
   /* Sunshine Coast inspired luxury palette */
+  --pico-primary: #1A5F7A;
+  --pico-primary-hover: #0A2E4D;
+  --pico-background-color: #FAF7F2;
+  --pico-color: #2C2C2C;
+  --pico-muted-color: #666666;
+  
+  /* Custom theme colors */
   --ocean-deep: #0A2E4D;
   --ocean-blue: #1A5F7A;
   --ocean-light: #86BBD8;
@@ -16,37 +23,7 @@
   /* Typography */
   --font-serif: 'Playfair Display', serif;
   --font-sans: 'Inter', sans-serif;
-  
-  /* Spacing */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
-  --spacing-2xl: 4rem;
-  --spacing-3xl: 6rem;
-  
-  /* Border Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  
-  /* Shadows */
-  --shadow-sm: 0 2px 20px rgba(0, 0, 0, 0.08);
-  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.08);
-  --shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.15);
-  
-  /* Transitions */
-  --transition-fast: 0.2s ease;
-  --transition-base: 0.3s ease;
-  
-  /* Borders */
-  --border-accent-width: 4px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --pico-font-family: var(--font-sans);
 }
 
 html {
@@ -55,19 +32,59 @@ html {
 
 body {
   font-family: var(--font-sans);
-  color: var(--text-dark);
-  line-height: 1.6;
-  background-color: var(--sand-light);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
   font-weight: 600;
-  line-height: 1.2;
+  color: var(--ocean-deep);
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 var(--spacing-lg);
+/* Custom logo styles */
+nav .logo {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+nav .logo strong {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--ocean-deep);
+  letter-spacing: -0.5px;
+}
+
+nav .logo small {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  color: var(--gold-accent);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+/* Footer styling */
+footer {
+  background: var(--ocean-deep);
+  color: var(--sand-light);
+  padding: 3rem 0 1rem;
+  margin-top: 4rem;
+}
+
+footer h3, footer h4 {
+  color: var(--gold-light);
+}
+
+footer p, footer a, footer small {
+  color: var(--sand-warm);
+}
+
+footer a:hover {
+  color: var(--gold-light);
+}
+
+footer ul {
+  list-style: none;
+  padding-left: 0;
 }
