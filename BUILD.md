@@ -40,7 +40,7 @@ The build output will be in the `dist` directory.
 
 If build fails on Cloudflare Pages:
 
-1. **Check Node.js version**: Ensure Cloudflare Pages is using Node 18+
+1. **Check Node.js version**: Ensure Cloudflare Pages is using Node 18
    - The `.node-version` and `.nvmrc` files specify this
    
 2. **Verify build command**: Should be exactly `npm run build`
@@ -48,8 +48,7 @@ If build fails on Cloudflare Pages:
 3. **Check output directory**: Must be set to `dist`
 
 4. **Dependencies**: All required packages are in `package.json`
-   - @astrojs/starlight ^0.37.3
-   - astro ^5.16.11
+   - Check `package.json` for current dependency versions
 
 ### Performance
 
