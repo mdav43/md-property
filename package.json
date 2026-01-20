@@ -9,11 +9,16 @@
     "preview": "astro preview",
     "astro": "astro"
   },
-  "keywords": ["real-estate", "astro", "sunshine-coast"],
+  "keywords": [
+    "real-estate",
+    "astro",
+    "sunshine-coast"
+  ],
   "author": "Jack McGhee",
   "license": "ISC",
   "dependencies": {
     "@astrojs/mdx": "^4.3.13",
+    "@astrojs/starlight": "^0.37.3",
     "astro": "^5.16.11"
   }
 }
