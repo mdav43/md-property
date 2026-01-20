@@ -1,0 +1,35 @@
+---
+title: Blog
+layout: default
+description: Market insights and real estate advice for the Sunshine Coast
+bodyClass: page-blog
+---
+
+<div class="intro">
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+        <h1>Market Insights & Property Tips</h1>
+        <p>Expert advice and analysis from Jack McGhee, your trusted Sunshine Coast real estate professional with 20+ years of experience.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container pb-6">
+  <div class="row">
+    {% for post in site.posts %}
+    <div class="col-12 col-md-6 mb-3">
+      <div class="service service-summary">
+        <div class="service-content">
+          <h2 class="service-title">
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          </h2>
+          <p>{{ post.description }}</p>
+          <p class="text-muted">{{ post.date | date: "%B %d, %Y" }} | {{ post.author }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
