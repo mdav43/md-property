@@ -88,6 +88,22 @@ The website includes:
 - Font preloading
 - Clean, semantic HTML
 
+## 🚢 Deployment
+
+### Cloudflare Pages
+
+This project is configured for deployment on Cloudflare Pages:
+
+- **Build command**: `npm run build`
+- **Build output directory**: `dist`
+- **Node.js version**: 18 (specified in `.node-version` and `.nvmrc`)
+
+See [BUILD.md](BUILD.md) for detailed build configuration and troubleshooting.
+
+### GitHub Pages
+
+Alternatively, the project can be deployed to GitHub Pages using the included workflow.
+
 ## 📧 Contact Information
 
 Jack McGhee Real Estate  
